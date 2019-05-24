@@ -1,0 +1,86 @@
+body {
+    
+    }
+
+/* Inputt felt, brukernavn og passord */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* style for alle kanpper*/
+button {
+  background-color: rgb(53, 129, 234);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/*hover effekt på knapper*/
+button:hover {
+  opacity: 0.8;
+}
+
+/* stil på cancel knappen*/
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* container for innlogg*/
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* innlogg blokk */
+.modal {
+  display: none /* holdes skjult som default*/
+  position: fixed;
+  z-index: 1; /* bli på toppen */
+  left: 0;
+  top: 0;
+  width: 100%; /* full bredde */
+  height: 100%; /* full høyde */
+  overflow: auto; /* scrollbar dersom det trengs*/
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); /* svart med styrke 0.4 */
+  padding-top: 60px;
+}
+
+/* bakgrunn på innlogg blokk */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% fra toppen, 15% fra bunn og i midten */
+  border: 1px solid #888; /*kant på innlogg osv*/
+  width: 40%; /*Størrese på selve innloggen*/
+}
+
+
+/* Animasjon for innlogg gli inn */
+.animate {
+  -webkit-animation: animatezoom 1s;
+  animation: animatezoom 1s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
