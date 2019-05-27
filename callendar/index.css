@@ -1,0 +1,80 @@
+#callendar{
+    width: 50%;
+}
+
+#callendarDiv{
+    top: 5px;
+}
+
+ul {list-style-type: none;}
+body {font-family: cursive sans-serif;}
+
+/* Month header */
+.month {
+  padding: 0px;
+  width: 20%;
+  background: #003366 ;
+  text-align: center;
+
+}
+
+/* Month list */
+.month ul {
+  margin: 0;
+  padding: 0;
+    
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* Previous button inside month header */
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+/* Next button */
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+    display: inline;
+  margin: 0;
+  padding: 1px 0;
+    font-size: 12px;
+   
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 20px;;
+  color: #666;
+  text-align: center;
+}
+
+/* Days (1-31) */
+.days {
+  padding: 5px 0;
+  background: #eee;
+  margin: 0;
+    width: 20%;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 11.5%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:13px;
+  color: #777;
+}
+
