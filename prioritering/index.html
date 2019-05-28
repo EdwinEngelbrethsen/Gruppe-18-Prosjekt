@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+    <script href="index.js"></script>
+<body>
+   
+    <button type="button" id="exclemation1" onclick="addingPriority1()">!</button>
+    
+    <button type="button" id="exclemation2" onclick="addingPriority2()">!!</button>
+    
+    <button type="button" id="exclemation3" onclick="addingPriority3()">!!!</button>
+    
+    
+<script>
+    
+    
+    function addingPriority1() {
+
+        document.getElementById("exclemation1");
+   
+        var wantAlarm = prompt("Do you want an alarm?");
+        if(wantAlarm==="yes"){
+            var milliseconds = parseInt(prompt("Type in number of seconds until alert"));
+             var time = (milliseconds*1000);
+        setTimeout(function() { alert("Your alarm is here motherfucker!!!"); }, time);
+            console.log("!");
+        }
+        else{
+            console.log("!");
+        }
+      
+}
+ 
+   function addingPriority2() {
+
+        document.getElementById("exclemation2");
+   
+        var wantAlarm = prompt("Do you want an alarm?");
+       
+       if(wantAlarm==="yes"){
+            var milliseconds = parseInt(prompt("Type in number of seconds until alert"));
+             var time = (milliseconds*1000);
+        setTimeout(function() { alert("Your alarm is here motherfucker!!!"); }, time);
+            console.log("!!");
+        }
+        
+       else{
+            console.log("!!");
+        }
+      
+}
+ 
+        function addingPriority3() {
+
+        document.getElementById("exclemation3");
+   
+        var wantAlarm = prompt("Do you want an alarm?");
+        
+            if(wantAlarm==="yes"){
+            var milliseconds = parseInt(prompt("Type in number of seconds until alert"));
+             var time = (milliseconds*1000);
+        setTimeout(function() { alert("Your alarm is here motherfucker!!!"); }, time);
+            console.log("!!!");
+        }
+        
+            else{
+            console.log("!!!");
+        }
+      
+}
+   
+   
+ </script>
+    
+    
+    
+    </body>
+</html
