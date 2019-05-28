@@ -1,14 +1,22 @@
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
     width: 100%;
+    /*height: 100%;*/
     font-family: 'Arial', serif;
     background-color: #f4f4f4;
     overflow-x: hidden;
-    display: grid;
+    
 }
 
+/*.container {
+    height: 100%;
+    
+    /*transition: margin-left 0.5s;
+    padding: 20px;
+    width: 100%;*/
+
+/*Top navbar*/ 
 .navbar {
     background-color: #3b5998;
     overflow: hidden; 
@@ -19,11 +27,10 @@ html, body {
     float: left;
     display: block; 
     color: #f2f2f2;
-    text-align: center;
+    text-align: left;
     padding: 14px 16px;
     text-decoration: none; 
-    font-size: 17px; 
-    
+    font-size: 17px;
 }
 
 .navbar ul {
@@ -36,6 +43,7 @@ html, body {
     color: #000;
 }
 
+/*Sliding navbar*/ 
 .side-nav {
     height: 100%;
     width: 0;
@@ -47,7 +55,7 @@ html, body {
     opacity: 0.9;
     overflow-x: hidden;
     padding-top: 60px;
-    transition: 0.5s;
+    transition: 0.5s; 
 }
 
 .side-nav a {
@@ -72,57 +80,31 @@ html, body {
 }
 
 
-#main {
-    transition: margin-left 0.5s;
-    padding: 20px;
-    overflow: hidden; 
-    width: 100%;
-}
-
-/*over 561 vil ikke denne gjøre noe*/
+/*over 561 vil ikke denne gjøre noe */
 @media(max-width: 568px) {
     .navbar-nav{display:none}
 }
 
-
-
-
-
-/*
-@media(min-width: 568px) {
-    .open-slide{display:none}
-}
-*/
-/*
-.nav {
-    background-color: #229FC8;
-    color: #ffffff;
-    list-style: none;
-    text-align: center;
-    padding: 20px 0 20px 0;
-    margin: 0;
+/* Denne må justeres senere, innholdet under meny*/
+.main {
+    height: auto;
+    margin: 1em;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-column-gap: 0.5em;
+    
 }
 
-/*if antother list, will not style it.*/
-
-/*
-
-.nav > li {
-    display: inline-block;
-    padding-right: 50px;
+.firstColumn {
+    background-color: grey;
+    height: 700px;
+    padding: 1em;
 }
 
-.nav > li > a {
-    text-decoration: none;
-    color: #ffffff;
+.secondColumn {
+    background-color: red;
+    height: 700px;
+    padding: 1em;
 }
 
-.nav > li > a:hover {
-    color: #c1c1c1;
-}
 
-#menu-icon {
-    position: center;
-}
-
-*/
