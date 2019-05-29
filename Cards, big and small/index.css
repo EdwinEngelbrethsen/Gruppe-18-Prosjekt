@@ -3,6 +3,7 @@ Body {
   font-family: Sans-serif;
   font size: 14;
   width: 100%;
+    overflow: scroll;
   background-color: #E0E0E0;
 }
 
