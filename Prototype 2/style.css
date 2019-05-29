@@ -1,0 +1,106 @@
+html, body {
+  height: 720px;
+  width: 1280px;
+  background: #rgb(150,150,150);
+}
+
+.fill {
+  height: 10%;
+  width: 20%;
+  cursor: pointer;
+}
+
+.empty {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  /* border: 2px salmon solid; */
+  background-color: white;
+}
+
+.hold {
+  border: solid white 4px;
+}
+
+.hovered {
+  background: #f4f4f4;
+}
+.invisible {
+  display: none;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 8% 20% 20% 20%;
+  grid-template-rows: 7% 30% 30% auto;
+  grid-template-areas:
+          "sidebar header header header"
+          "sidebar empty1 empty2 empty3"
+          "sidebar empty4 empty5 empty6"
+          "sidebar foot   foot   foot";
+}
+sidebar{
+  margin: 1px;
+  grid-area: sidebar;
+  background-color: rgb(230,100,100);
+}
+header{
+  margin: 1px;
+  grid-area: header;
+  background-color: rgb(100,100,100);
+}
+foot{
+  margin: 1px;
+  grid-area: foot;
+  background-color: rgb(100,100,100);
+}
+
+empty:nth-of-type(1){
+  grid-area: empty1;
+  /* background-color: #007FF; */
+}
+empty:nth-of-type(2){
+  grid-area: empty2;
+  /* background-color: grey; */
+}
+empty:nth-of-type(3){
+  grid-area: empty3;
+  /* background-color: black; */
+}
+empty:nth-of-type(4){
+  grid-area: empty4;
+  /* background-color: #f4f4f4; */
+}
+empty:nth-of-type(5){
+  grid-area: empty5;
+  /* background-color: #5E86AF; */
+}
+empty:nth-of-type(6){
+  grid-area: empty6;
+  /* background-color: rgb(200,200,50); */
+}
+
+.add-to-do{
+  position: relative;
+  width: auto;
+  height: auto;
+  background-color: #FFF;
+  padding: 10px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+.add-to-do i{
+  position: absolute;
+  font-size: 20px;
+  color: #4162f6;
+}
+.add-to-do input{
+  position: absolute;
+  left: 30px;
+  height: auto;
+  width: auto;
+  background-color: transparent;
+  border: none;
+  font-size: 12px;
+
+}
