@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+<body>
+    
+<!-- siden -->
+    <div class="site">
+    <!--klasse for hele merkelappen-->
+        <ol class="kanban To-do">
+            <div class="kanban-title">
+                <h2> To do</h2></div>
+    <!--liten lapp-->
+            <li class="card-item" id="1">
+                <form class="modalanimate" action="/action_page.php">
+           
+                    <div class="title">Titel <br></div>
+                    <div class="text" contenteditable="true">Lage pannekaker</div>
+                <!-- redigerings knapp -->
+                <button type ="button" id="edit" class="material-icons" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"> edit</button>
+        
+           
+                </form>
+            </li>
+      <!-- legg til ny liste her --> 
+      
+      <!--  ny oppgave knapp -->
+            <div class="add-btn">
+                <button onclik="myBut"> add new card</button>
+            </div>
+      
+        </ol> 
+    </div>
+
+
+
+    <!-- redigeringsmeny -->
+    <div id="id01" class="modal">
+  
+        <form class="modal-content animate" action="/action_page.php">
+
+            <!-- input felti redigeringsmeny -->
+            <div class="des">Titel <br></div>
+            <div class="text" contenteditable="true">Lage pannekaker</div>
+            <div class="des">Description<br></div>
+            <div class="text" contenteditable="true">Lage pannekaker med bacon og syltetøy</div> 
+            <div class="date">Date <br></div>
+            <input type="date" id="myDate" value="2019-01-27">
+            <div class="des" id="person">Person <br></div>
+            <div class="text" contenteditable="true">Anette Vestvik</div>
+            <!--close knapp for redigeringsmeny -->
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Close</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
