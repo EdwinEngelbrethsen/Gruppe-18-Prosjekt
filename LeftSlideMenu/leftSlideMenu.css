@@ -18,7 +18,7 @@ html, body {
 
 /*Top navbar*/ 
 .navbar {
-    background-color: #3b5998;
+    background-color: #3b5950;
     overflow: hidden; 
     height: 63px;
 }
@@ -79,7 +79,6 @@ html, body {
     margin-left: 50px;
 }
 
-
 /*over 561 vil ikke denne gjøre noe */
 @media(max-width: 568px) {
     .navbar-nav{display:none}
@@ -92,19 +91,39 @@ html, body {
     display: grid;
     grid-template-columns: 80% 20%;
     grid-column-gap: 0.5em;
-    
 }
 
 .firstColumn {
-    background-color: grey;
+    background-color: rgb(230,230,230);
     height: 700px;
     padding: 1em;
+    margin: 0px;
 }
 
 .secondColumn {
-    background-color: red;
+    background-color: rgb(230,230,230);
     height: 700px;
     padding: 1em;
+    margin: 0px;
 }
 
+.todo {
+    height: 600px;
+    width: 250px; 
+    background-color: rgb(200,200,200);
+    left: 10px;
+}
+
+.doing {
+    height: 600px;
+    width: 250px; 
+    background-color: rgb(200,200,200);
+    left: 300px;
+}
+
+.done{
+    height: 600px;
+    width: 250px; 
+    background-color: rgb(200,200,200); 
+}
 
