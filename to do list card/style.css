@@ -16,11 +16,19 @@ body{
 .header{
     width: 380px;
     height:200px;
-    background-image: url('../img/bg1.jpg');
+    background-color: aqua;
     background-size: 100% 200%;
     background-repeat: no-repeat;
     border-radius: 15px 15px 0 0;
     position: relative;
+    
+}
+h2{
+    position: relative;
+    top: 50%;
+    left: 30%;
+    font-weight: bold;
+    font-size: 30px;
 }
 .clear{
     width : 30px;
@@ -68,9 +76,10 @@ body{
     min-height: 45px;
     position: relative;
     border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-top: 1px solid rgba(0,0,0,0.1);
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 1px;
 }
 .item i.co{
     position: absolute;
@@ -153,4 +162,113 @@ body{
     color: #4162f6;
     font-family: 'Titillium Web', sans-serif;
     font-size: 20px;
+}
+
+/* ----- Store kort -- */
+
+/* Store kort hoved div */
+.modal {
+  display: none; /* holdes skjult som default*/
+  position: fixed;
+  z-index: 1; /* bli på toppen */
+  left: 0;
+  top: 0;
+  width: 100%; /* full bredde */
+  height: 100%; /* full høyde */
+  overflow: auto; /* scrollbar dersom det trengs*/
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); /* svart med styrke 0.4 */
+  padding-top: 60px;
+   
+}
+
+/* styles av innholdet i store kort */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% fra toppen, 15% fra bunn og i midten */
+  width: 40%;/*Størrese på selve kortet*/
+  max-width: 250px;
+  margin-left: 40%;
+  margin-top: 10%;
+  border: 3px solid #ccc;
+  border-radius: 15px 15px 0 0;
+}
+
+/*hover på store kort */
+.modal-content:hover {
+  background: #fff;
+  border-color: #FFB300 ;
+}
+
+/*stil på description store kort */
+.des{
+    margin: 0.5rem;
+    font-weight: bold;
+    
+}
+/*stil på date-feltet*/
+.date{
+    margin:0.5rem;
+    font-weight: bold;
+}
+#myDate{
+    margin-left: 0.5rem;
+}
+
+.text{
+    margin: 0.5rem;
+    
+}
+
+/* Animasjon for store kort gli inn */
+.animate {
+  -webkit-animation: animatezoom 1s;
+  animation: animatezoom 1s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+#exclemation1{
+    display: inline-block;
+    position: absolute;
+    right: 87px;
+    margin-top: 2px;
+    
+}
+
+#exclemation2{
+    display: inline-block;
+    position: absolute;
+    right: 60px;
+    margin-top: 2px;
+    
+}
+
+#exclemation3{
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+    margin-top: 2px;
+    
+}
+
+.btn-container{
+    height: 2rem;
+    width: 100%;
+    display: inline-block;
+    
+}
+.btn-close{
+    display: inline-block;
+    position: relative;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
 }

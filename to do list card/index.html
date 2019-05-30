@@ -6,7 +6,7 @@
     <title>JavaScript - To Do List</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
-    <link rel="stylesheet" href="css/">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -42,9 +42,9 @@
             <div class="des" id="person">Person <br></div>
             <div class="text" contenteditable="true">Anette Vestvik</div>
             <!--close knapp for redigeringsmeny -->
-            <div class="container" style="background-color:#f1f1f1">
-                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Close</button>
-                <i class="fas fa-trash"></i>
+            <div class="btn-container" style="background-color:#f1f1f1">
+                <button type="button" class="btn-close" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Close</button>
+                <i id ="trash" class="fa fa-trash"></i>
                 
             </div>
         </form>
@@ -54,6 +54,6 @@
             <input type="text" id="input" placeholder="Add a to-do">
         </div>
     </div>
-    <script src="js/app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
