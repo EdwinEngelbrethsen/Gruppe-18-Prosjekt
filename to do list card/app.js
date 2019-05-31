@@ -58,6 +58,9 @@ function addToDo(toDo, id, done, trash){
                     <button type="button" id="exclemation2" onclick="addingPriority2()">!!</button>
     
                     <button type="button" id="exclemation3" onclick="addingPriority3()">!!!</button>
+
+                    <i class="fa fa-trash" job="delete"  id="${id}"></i>
+                    
                   </li>
                 `;
     
@@ -139,9 +142,8 @@ function completeToDo(element){
 } */
 
 
-// remove to do FUNKER IKKE
+// remove to do 
 function removeToDo(element){
-        console.log("noe skjer med slett");
 
     element.parentNode.parentNode.removeChild(element.parentNode);
     
@@ -150,7 +152,7 @@ function removeToDo(element){
 
 
 // target the items created dynamically
-/*
+
 list.addEventListener("click", function(event){
     const element = event.target; // return the clicked element inside list
     const elementJob = element.attributes.job.value; // complete or delete
@@ -164,7 +166,7 @@ list.addEventListener("click", function(event){
     // add item to localstorage ( this code must be added where the LIST array is updated)
     localStorage.setItem("TODO", JSON.stringify(LIST));
 });
-*/
+
 
 //----------------------------------------------------------------------------------------------
 
