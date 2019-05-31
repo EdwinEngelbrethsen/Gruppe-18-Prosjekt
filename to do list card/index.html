@@ -38,7 +38,15 @@
                 <div class="date">Date <br></div>
                 <input type="date" id="myDate" value="2019-01-27">
                 <div class="des" id="person">Person <br></div>
-                <div class="text" contenteditable="true">Anette Vestvik</div>
+                    <!-- drop down meny for å velge persom -->
+                    <select name="persons" class="text">
+                        <option value="anette">Anette Vestvik</option>
+                        <option value="edwin">Edwin Engelbrethsen</option>
+                        <option value="henrik">Henrik Kristiansen</option>
+                        <option value="jonas">Jonas Sandvoll</option>
+                        <option value="marie">Marie Elena Melvik</option>
+                        <option value="samuel">Samuel Grimstad</option>
+                    </select>
                 <!-- close knapp og felt i redigeringsmeny -->
                 <div class="btn-container" style="background-color:#f1f1f1">
                     <button type="button" class="btn-close" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Close</button>
