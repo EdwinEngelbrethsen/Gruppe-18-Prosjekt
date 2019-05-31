@@ -48,6 +48,7 @@ function addToDo(toDo, id, done, trash){
     const DONE = done ? CHECK : UNCHECK;
 
     const item = `<li class="item">
+                    <input type="color" name="favcolor" value="#ff0000">
                     
                     <p class="text">${toDo}</p>
                     <i class="fa fa-edit" onclick="document.getElementById('id01').style.display='block'" id="${id} "></i>
