@@ -2,14 +2,12 @@
 
 // Select the Elements
 const clear = document.querySelector(".clear");
-const dateElement = document.getElementById("date");
 const list = document.getElementById("list");
 const input = document.getElementById("input");
 
 // Classes names
-const CHECK = "fa-check-circle";
-const UNCHECK = "fa-circle-thin";
-const LINE_THROUGH = "lineThrough";
+const CHECK = "";
+const UNCHECK = "";
 
 // Variables
 let LIST, id;
@@ -41,11 +39,6 @@ clear.addEventListener("click", function(){
     location.reload();
 });
 
-/*// Show todays date
-const options = {weekday : "long", month:"short", day:"numeric"};
-const today = new Date();
-
-dateElement.innerHTML = today.toLocaleDateString("en-US", options); */
 
 // add to do function
 
@@ -54,11 +47,11 @@ function addToDo(toDo, id, done, trash){
     if(trash){ return; }
     
     const DONE = done ? CHECK : UNCHECK;
-    const LINE = done ? LINE_THROUGH : "";
+    
     
     const item = `<li class="item">
                     
-                    <p class="text ${LINE}">${toDo}</p>
+                    <p class="text">${toDo}</p>
                     <i class="fa fa-edit" onclick="document.getElementById('id01').style.display='block'" id="${id} "></i>
                     <button type="button" id="exclemation1" onclick="addingPriority1()">!</button>
     
@@ -79,7 +72,6 @@ function addEditMeny(toDo, id, done, trash){
     if(trash){ return; }
     
     const DONE = done ? CHECK : UNCHECK;
-    const LINE = done ? LINE_THROUGH : "";
     
     const item = `<div id="id01" class="modal">
   
@@ -107,6 +99,7 @@ function addEditMeny(toDo, id, done, trash){
     
     list.insertAdjacentHTML(position, item); 
 }
+
 */
 
 // add an item to the list user the enter key
@@ -136,17 +129,20 @@ document.addEventListener("keyup",function(even){
 
 
 // complete to do
+/*
 function completeToDo(element){
     element.classList.toggle(CHECK);
     element.classList.toggle(UNCHECK);
     element.parentNode.querySelector(".text").classList.toggle(LINE_THROUGH);
     
     LIST[element.id].done = LIST[element.id].done ? false : true;
-}
+} */
 
 
 // remove to do FUNKER IKKE
 function removeToDo(element){
+        console.log("noe skjer med slett");
+
     element.parentNode.parentNode.removeChild(element.parentNode);
     
     LIST[element.id].trash = true;
@@ -154,7 +150,7 @@ function removeToDo(element){
 
 
 // target the items created dynamically
-
+/*
 list.addEventListener("click", function(event){
     const element = event.target; // return the clicked element inside list
     const elementJob = element.attributes.job.value; // complete or delete
@@ -168,11 +164,11 @@ list.addEventListener("click", function(event){
     // add item to localstorage ( this code must be added where the LIST array is updated)
     localStorage.setItem("TODO", JSON.stringify(LIST));
 });
-
+*/
 
 //----------------------------------------------------------------------------------------------
 
-/*Sette forfallsdato i kortet*/
+/*Sette forfallsdato i redigerings - kortet*/
 function myFunction() {
   var x = document.getElementById("myDate").value;
   document.getElementById("demo").innerHTML = x;
