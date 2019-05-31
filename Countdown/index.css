@@ -77,7 +77,10 @@ body{
 
 #hiddenAlarmTxt{
     position: relative;
+    bottom: 170px;
+    left: 60px;
     visibility: hidden;
-    bottom: 300px; 
-    left: 30px;
 }
+
+
+

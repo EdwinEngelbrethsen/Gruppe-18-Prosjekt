@@ -1,10 +1,13 @@
 <!DOCTYPE HTML>
 <html>
+   <title id="yourTitle">Your website</title>
+
 <body>
     <link rel=stylesheet href="index.css">
     <div id="circle"></div>
     <div id="setTime">Set your timer</div>
-    <div id="time">Time left</div>
+    <div id="hiddenAlarmTxt">Your alarm has arrived mafakka</div>
+  
     
     
         <button type="button" name="5min" class="button" onclick="fiveMinCountdown()" style="vertical-align:middle"><span>5 min </span> </button>
@@ -19,7 +22,7 @@
         
         <audio id="timerDoneSound" src="alarmNoise.mp3"></audio>
     
-    <h1 id="hiddenAlarmTxt">Your alarm is here</h1>
+ 
 
 
         <script>
@@ -29,7 +32,7 @@
         document.getElementById("5min");
    
         
-             var time =parseInt ((5000));
+             var time =parseInt ((500));
         setTimeout(function() { document.getElementById("hiddenAlarmTxt").style.visibility="visible"; document.getElementById("timerDoneSound").play();  }, time);
         
         }
@@ -74,6 +77,8 @@
         
         
         }
+            
+        
             
     </script>
     
