@@ -1,0 +1,59 @@
+<!-- CODE EXPLAINED CHANNEL -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript - To Do List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="css/">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>To Do</h2>
+            <div class="clear">
+                <i class="fas fa-redo-alt"></i>
+            </div>
+            <div id="date"></div>
+        </div>
+        <div class="content">
+            <ul id="list">
+               <!-- 
+                <li class="item">
+                    <i class="fa fa-circle-thin co" job="complete" id="0"></i>
+                    <p class="text">Drink Coffee</p>
+                    <i class="fa fa-trash-o de" job="delete" id="0"></i> 
+                </li> -->
+            </ul>
+        </div>
+         <!-- redigeringsmeny -->
+    <div id="id01" class="modal">
+  
+        <form class="modal-content animate" action="/action_page.php">
+
+            <!-- input felti redigeringsmeny -->
+            <div class="des">Titel <br></div>
+            <div class="text" contenteditable="true">Lage pannekaker</div>
+            <div class="des">Description<br></div>
+            <div class="text" contenteditable="true">Lage pannekaker med bacon og syltetøy</div> 
+            <div class="date">Date <br></div>
+            <input type="date" id="myDate" value="2019-01-27">
+            <div class="des" id="person">Person <br></div>
+            <div class="text" contenteditable="true">Anette Vestvik</div>
+            <!--close knapp for redigeringsmeny -->
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Close</button>
+                <i class="fas fa-trash"></i>
+                
+            </div>
+        </form>
+    </div>
+        <div class="add-to-do">
+            <i class="fa fa-plus-circle"></i>
+            <input type="text" id="input" placeholder="Add a to-do">
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>

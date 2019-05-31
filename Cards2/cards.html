@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="cards.css">
+    <script src="cards.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+<body>
+    <!-- siden -->
+    <div class="site">
+    <!--klasse for hele merkelappen-->
+  <ol class="kanban To-do">
+    <div class="kanban-title">
+      <h2> To do</h2></div>
+    <!--Første lappen-->
+   <li class="card-item" id="1">
+       <form class="modal-content animate" action="/action_page.php">
+           
+       <div class="title">Titel <br></div>
+       <div class="text" contenteditable="true">skriv en tittel</div>
+    
+        <div class="actions"> 
+            <button type ="button" id = "edit" class="material-icons" onclick="document.getElementById('edit-site');">edit</button>
+             
+       </div>
+       </form>
+    </li>
+      <!-- legg til ny oppgave knapp -->
+      <div class="add-btn">
+      <button onclik="myBut"> add new card</button>
+    </div>
+      
+    </ol>
+        
+     
+    <!-- legg til ny liste her -->   
+    </div>
+
+</body>
+</html>
+
+    

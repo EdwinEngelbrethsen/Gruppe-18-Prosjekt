@@ -1,0 +1,203 @@
+
+.material-icons{
+    max-width: 50px;
+}
+    
+/*Cards*/
+Body {
+  font-family: Sans-serif;
+  font size: 14;
+  width: 100%;
+  background-color: #E0E0E0;
+}
+
+h1 {
+  position: absolute;
+  left: 1em;
+  top: 1em;
+}
+
+.dd {
+  max-width: 100%;
+  top: auto;
+  margin: 0 auto;
+  display: block;
+  vertical-align: top;
+}
+
+
+ol.list {
+  padding-top: 2em;
+  padding-left: 1em;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+ol.list .text {
+  float: right;
+  width: 60%;
+}
+
+ol.list .actions,
+ol.list label {
+  float: left;
+  width: 30%;
+}
+
+ol.list > li,
+ol.list > h3 {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+ol.list > h2 {
+  padding-bottom: 6px;
+}
+
+
+h2 {
+  color: #607D8B;
+}
+
+
+.dd-item:hover,
+button:hover {
+  color: #00838F;
+  will-change: box-shadow;
+  transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+  box-shadow: 0 5px 6px 0 rgba(0, 0, 0, .14), 0 3px 1px -6px rgba(0, 0, 0, .2), 2px 5px 3px 0 rgba(0, 0, 0, .12);
+}
+
+button.addbutt {
+  background-color: #EEEEEE;
+  color: #607D8B;
+  width: 100%;
+  
+}
+
+.list > button.addbutt {
+  max-width: 330px;
+}
+
+button:active, button:down, button:focus {
+    box-shadow: 0 0 0 0, 0 0 0 0 rgba(0, 0, 0, .2), 0 0 0 0 ;color:#FFB300;
+}
+
+button {
+  align-items: center;
+  background-color: #EEEEEE;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  color: #607D8B;
+  position: relative;
+  margin: 0;
+  min-width: 44px;
+  padding: 10px 16px;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1;
+  overflow: hidden;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+    }
+
+ol.kanban.To-do {
+  border-top: 5px solid #FFB300;
+}
+
+
+ol.kanban {
+  border-top: 1rem solid #78909C;
+  width: 20%;
+  height: auto;
+  margin: 5%;
+  max-width: 250px;
+  min-width: 160px;
+  display: inline-block;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+  flex-direction: column;
+  min-height: 200px;
+  z-index: 1;
+  position: relative;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.dd-item {
+  display: none;
+  position: relative;
+  list-style: none;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  min-height: 4rem;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 1rem;
+  min-height: 120px;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  background: #fff;
+  border-radius: 1rem;
+  box-sizing: border-box;
+}
+
+
+.text {
+
+  border-top: 5rem solid font-size: 5rem;
+  font-weight: 400;
+  line-height: 1rem;
+  overflow: hidden;
+  padding: 16px;
+  width: 90%;
+}
+
+.actions {
+  border-top: 0.2rem solid rgba(0, 0, 0, .1);
+  font-size: 1rem;
+  line-height: normal;
+  width: 100%;
+  color: #B0BEC5;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+
+.dd-item {
+  display: block;
+  margin: 5px 0;
+  padding: 5px 10px;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  background: #fafafa;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.dd-item:hover {
+  background: #fff;
+  border-color: #FFB300 ;
+}
+#person{
+    margin-top: 1rem;
+}
+
+.dd1{
+    display: none;
+}
+.small-item{
+    list-style: none;
+}
+

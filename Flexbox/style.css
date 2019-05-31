@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 10% 30% 30% 30%;
+  grid-template-rows: 8% 92%;
+  grid-template-areas:
+          "sidebar navbar navbar navbar"
+          "sidebar empty1 empty2 empty3";
+}
+
+.empty {
+  display: inline-block;
+  width: 250px;
+  height: 500px;
+  background-color: rbg(100,100,100);
+}
+
+sidebar {
+  margin: 0;
+  grid-area: sidebar;
+  background-color: rgb(230,100,100);
+}
+navBar{
+  margin: 0;
+  grid-area: navbar;
+  background-color: rgb(100,100,100);
+}
+
+mainContainer {
+  display: flex;
+  flex-flow: row wrap-reverse;
+
+}
+
+empty:nth-of-type(1) {
+  grid-area: empty1;
+}
+
+empty:nth-of-type(2) {
+  grid-area: empty2;
+}
+
+empty:nth-of-type(3) {
+  grid-area: empty3;
+}

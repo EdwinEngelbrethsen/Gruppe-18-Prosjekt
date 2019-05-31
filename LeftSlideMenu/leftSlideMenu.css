@@ -1,16 +1,24 @@
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
     width: 100%;
+    /*height: 100%;*/
     font-family: 'Arial', serif;
     background-color: #f4f4f4;
     overflow-x: hidden;
-    display: grid;
+    
 }
 
+/*.container {
+    height: 100%;
+    
+    /*transition: margin-left 0.5s;
+    padding: 20px;
+    width: 100%;*/
+
+/*Top navbar*/ 
 .navbar {
-    background-color: #3b5998;
+    background-color: #3b5950;
     overflow: hidden; 
     height: 63px;
 }
@@ -19,11 +27,10 @@ html, body {
     float: left;
     display: block; 
     color: #f2f2f2;
-    text-align: center;
+    text-align: left;
     padding: 14px 16px;
     text-decoration: none; 
-    font-size: 17px; 
-    
+    font-size: 17px;
 }
 
 .navbar ul {
@@ -36,6 +43,7 @@ html, body {
     color: #000;
 }
 
+/*Sliding navbar*/ 
 .side-nav {
     height: 100%;
     width: 0;
@@ -47,7 +55,7 @@ html, body {
     opacity: 0.9;
     overflow-x: hidden;
     padding-top: 60px;
-    transition: 0.5s;
+    transition: 0.5s; 
 }
 
 .side-nav a {
@@ -71,58 +79,51 @@ html, body {
     margin-left: 50px;
 }
 
-
-#main {
-    transition: margin-left 0.5s;
-    padding: 20px;
-    overflow: hidden; 
-    width: 100%;
-}
-
-/*over 561 vil ikke denne gjøre noe*/
+/*over 561 vil ikke denne gjøre noe */
 @media(max-width: 568px) {
     .navbar-nav{display:none}
 }
 
-
-
-
-
-/*
-@media(min-width: 568px) {
-    .open-slide{display:none}
-}
-*/
-/*
-.nav {
-    background-color: #229FC8;
-    color: #ffffff;
-    list-style: none;
-    text-align: center;
-    padding: 20px 0 20px 0;
-    margin: 0;
+/* Denne må justeres senere, innholdet under meny*/
+.main {
+    height: auto;
+    margin: 1em;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-column-gap: 0.5em;
 }
 
-/*if antother list, will not style it.*/
-
-/*
-
-.nav > li {
-    display: inline-block;
-    padding-right: 50px;
+.firstColumn {
+    background-color: rgb(230,230,230);
+    height: 700px;
+    padding: 1em;
+    margin: 0px;
 }
 
-.nav > li > a {
-    text-decoration: none;
-    color: #ffffff;
+.secondColumn {
+    background-color: rgb(230,230,230);
+    height: 700px;
+    padding: 1em;
+    margin: 0px;
 }
 
-.nav > li > a:hover {
-    color: #c1c1c1;
+.todo {
+    height: 600px;
+    width: 250px; 
+    background-color: rgb(200,200,200);
+    left: 10px;
 }
 
-#menu-icon {
-    position: center;
+.doing {
+    height: 600px;
+    width: 250px; 
+    background-color: rgb(200,200,200);
+    left: 300px;
 }
 
-*/
+.done{
+    height: 600px;
+    width: 250px; 
+    background-color: rgb(200,200,200); 
+}
+

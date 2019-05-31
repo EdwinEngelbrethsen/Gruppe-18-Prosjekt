@@ -1,0 +1,135 @@
+commit 9d96de53b8f85b3ca527f3d47e28a491a9fe0622
+Merge: fc189d2 98f0fb0
+Author: samGrimstad <samuel.grimstad@me.com>
+Date:   Tue May 28 13:15:25 2019 +0200
+
+    Merge branch 'master' of github.com:EdwinEngelbrethsen/Gruppe-18-Prosjekt
+
+commit 98f0fb09a8e81008783f2e07a43e2c0442c789aa
+Author: Anette Vestvik <Anette_vestvik@hotmail.com>
+Date:   Tue May 28 13:14:25 2019 +0200
+
+    ToDo Cards in JS
+
+commit fc189d26ed2e67002b95606f5241434a4f47ffa6
+Author: samGrimstad <samuel.grimstad@me.com>
+Date:   Tue May 28 13:12:33 2019 +0200
+
+    priority
+
+commit db960a18b797d62f2d020db0a1ab1f6712e58b3a
+Author: Anette Vestvik <Anette_vestvik@hotmail.com>
+Date:   Tue May 28 13:11:20 2019 +0200
+
+    Cards html og css
+    
+    ikke riktig kort
+
+commit a389270a825cede574f592c4ee0d49a3a86a892e
+Author: Marie <mariemelvik@outlook.com>
+Date:   Tue May 28 08:15:52 2019 +0200
+
+    Menu med bootstrap
+
+commit 72f2d6c9ba1304cd47d669ee3f327ec5e6c35c3d
+Author: Marie <mariemelvik@outlook.com>
+Date:   Mon May 27 13:29:47 2019 +0200
+
+    Create .DS_Store
+
+commit c0e80570c5a2ac0b2113a7bbfe474ee1dbc02710
+Author: Marie <mariemelvik@outlook.com>
+Date:   Mon May 27 13:07:14 2019 +0200
+
+    Revert "Create .DS_Store"
+    
+    This reverts commit 68d48530c6199537c07a985452056665752313fc.
+
+commit d83c8becbb96622706990fa8f1412f98ce5b599a
+Merge: 68d4853 d5b7e02
+Author: Marie <mariemelvik@outlook.com>
+Date:   Mon May 27 13:07:07 2019 +0200
+
+    Merge branch 'master' of https://github.com/EdwinEngelbrethsen/Gruppe-18-Prosjekt
+
+commit 68d48530c6199537c07a985452056665752313fc
+Author: Marie <mariemelvik@outlook.com>
+Date:   Mon May 27 13:06:09 2019 +0200
+
+    Create .DS_Store
+
+commit d5b7e021b42b51e8a4f8ef18b753f077d40d2420
+Author: samGrimstad <samuel.grimstad@me.com>
+Date:   Mon May 27 12:52:05 2019 +0200
+
+    callendar
+
+commit 62934ec4928c5b515598f4b07f1af4bd8dbfa13c
+Author: samGrimstad <samuel.grimstad@me.com>
+Date:   Mon May 27 12:42:08 2019 +0200
+
+    callendar
+
+commit 0934e010427affa159874d517975593e9411ea0b
+Author: Anette Vestvik <Anette_vestvik@hotmail.com>
+Date:   Mon May 27 12:37:27 2019 +0200
+
+    Fulle kort
+    
+    Fulle kort uten add button som funker. Alt annet skal være i orden. litt uryddig enn så lenge.
+
+commit ae74cdf08841209ca3a87f173704115edf1ecb7c
+Author: EdwinEngelbrethsen <42572771+EdwinEngelbrethsen@users.noreply.github.com>
+Date:   Mon May 27 12:02:00 2019 +0200
+
+    Update style.css
+
+commit e16aa7c95413e96e101cec53ad06dc8acc38d727
+Author: EdwinEngelbrethsen <42572771+EdwinEngelbrethsen@users.noreply.github.com>
+Date:   Mon May 27 11:54:25 2019 +0200
+
+    Drag n Drop
+
+commit e0740b89c113f1c1742114314fc1c5df9c088a4d
+Author: Marie <mariemelvik@outlook.com>
+Date:   Mon May 27 11:15:38 2019 +0200
+
+    Venstre sidemeny
+
+commit 3200f07c57a3c3db2c8ec4c43e03dd2a9b4dbce3
+Author: Anette Vestvik <Anette_vestvik@hotmail.com>
+Date:   Fri May 24 12:54:12 2019 +0200
+
+    login
+    
+    login for site
+
+commit 03dd3e06146ee5f8e9fa179d7dd2d7f3b20c2976
+Author: EdwinEngelbrethsen <42572771+EdwinEngelbrethsen@users.noreply.github.com>
+Date:   Fri May 24 12:08:34 2019 +0200
+
+    Update index.html
+
+commit 9a69a2411dda0d379ff11a770aac9e8d14b91494
+Author: EdwinEngelbrethsen <42572771+EdwinEngelbrethsen@users.noreply.github.com>
+Date:   Fri May 24 12:07:14 2019 +0200
+
+    Update index.html
+
+commit 2ecf08e5f801573a5a34d96eca995e21edf7e101
+Author: EdwinEngelbrethsen <42572771+EdwinEngelbrethsen@users.noreply.github.com>
+Date:   Fri May 24 12:05:49 2019 +0200
+
+    Update index.html
+
+commit 6f2382021775a3e671d1cd9cf5ee5c1d0388a5cd
+Author: EdwinEngelbrethsen <42572771+EdwinEngelbrethsen@users.noreply.github.com>
+Date:   Thu May 23 10:49:39 2019 +0200
+
+    Publish
+
+commit ee4114e1316e8d4622967e0b395633c7292b0320
+Author: EdwinEngelbrethsen <42572771+EdwinEngelbrethsen@users.noreply.github.com>
+Date:   Thu May 23 10:16:45 2019 +0200
+
+    Initial commit
