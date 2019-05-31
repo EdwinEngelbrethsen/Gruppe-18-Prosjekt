@@ -1,54 +1,52 @@
-// CODE EXPLAINED channel
 
-// Select the Elements
+
+// henter elementer fra html
 const clear = document.querySelector(".clear");
 const list = document.getElementById("list");
 const input = document.getElementById("input");
 
-// Classes names
+// klasse navn
 const CHECK = "";
 const UNCHECK = "";
 
-// Variables
+// Variabler
 let LIST, id;
 
-// get item from localstorage
+// henter item fra localstorage
 let data = localStorage.getItem("TODO");
 
-// check if data is not empty
+// sjekker at data ikke er tomt
 if(data){
     LIST = JSON.parse(data);
-    id = LIST.length; // set the id to the last one in the list
-    loadList(LIST); // load the list to the user interface
+    id = LIST.length; // setter id'en som den neste i arrayet
+    loadList(LIST); // laste listen til brukeren
 }else{
-    // if data isn't empty
+    // viss data ikke er tom
     LIST = [];
     id = 0;
 }
 
-// load items to the user's interface
+// las items til brukeren
 function loadList(array){
     array.forEach(function(item){
         addToDo(item.name, item.id, item.done, item.trash);
     });
 }
 
-// clear the local storage
+// clear local storage
 clear.addEventListener("click", function(){
     localStorage.clear();
     location.reload();
 });
 
 
-// add to do function
-
+// legg til en to-do funksjon
 function addToDo(toDo, id, done, trash){
     
     if(trash){ return; }
     
     const DONE = done ? CHECK : UNCHECK;
-    
-    
+
     const item = `<li class="item">
                     
                     <p class="text">${toDo}</p>
@@ -63,54 +61,20 @@ function addToDo(toDo, id, done, trash){
                     
                   </li>
                 `;
-    
+    /* posisjonen for hvor nye items skal legge seg */
     const position = "beforeend";
     
     list.insertAdjacentHTML(position, item);
 }
 
-//lage popup boksen her
-/*
-function addEditMeny(toDo, id, done, trash){
-    if(trash){ return; }
-    
-    const DONE = done ? CHECK : UNCHECK;
-    
-    const item = `<div id="id01" class="modal">
-  
-                    <form class="modal-content animate" action="/action_page.php">
 
-                   
-                        <div class="des">Titel <br></div>
-                        <div class="text" contenteditable="true">Lage pannekaker</div>
-                        <div class="des">Description<br></div>
-                        <div class="text" contenteditable="true">Lage pannekaker med bacon og syltetøy</div> 
-                        <div class="date">Date <br></div>
-                        <input type="date" id="myDate" value="2019-01-27">
-                        <div class="des" id="person">Person <br></div>
-                        <div class="text" contenteditable="true">Anette Vestvik</div>
-           
-                        <div class="btn-container" style="background-color:#f1f1f1">
-                        <button type="button" class="btn-close" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Close</button>
-                        <i id ="trash" class="fa fa-trash"></i>
-                
-                       </div>
-                    </form>
-                </div>`;
-    
-    const position = "beforeend";
-    
-    list.insertAdjacentHTML(position, item); 
-}
 
-*/
-
-// add an item to the list user the enter key
+// legg til ett item til listen ved at bruker trykker på "enter"
 document.addEventListener("keyup",function(even){
     if(event.keyCode == 13){
         const toDo = input.value;
         
-        // if the input isn't empty
+        // vist brukerens input ikke er tomt
         if(toDo){
             addToDo(toDo, id, false, false);
             
@@ -121,7 +85,7 @@ document.addEventListener("keyup",function(even){
                 trash : false
             });
             
-            // add item to localstorage ( this code must be added where the LIST array is updated)
+            // legg til item til localstorage 
             localStorage.setItem("TODO", JSON.stringify(LIST));
             
             id++;
@@ -131,18 +95,8 @@ document.addEventListener("keyup",function(even){
 });
 
 
-// complete to do
-/*
-function completeToDo(element){
-    element.classList.toggle(CHECK);
-    element.classList.toggle(UNCHECK);
-    element.parentNode.querySelector(".text").classList.toggle(LINE_THROUGH);
-    
-    LIST[element.id].done = LIST[element.id].done ? false : true;
-} */
 
-
-// remove to do 
+// slett to-do punkt
 function removeToDo(element){
 
     element.parentNode.parentNode.removeChild(element.parentNode);
@@ -151,19 +105,18 @@ function removeToDo(element){
 }
 
 
-// target the items created dynamically
 
+/* velger items som er laget dynamsisk, må til at det er mulig å trykke på f.eks slett ikonet */
 list.addEventListener("click", function(event){
-    const element = event.target; // return the clicked element inside list
-    const elementJob = element.attributes.job.value; // complete or delete
+    const element = event.target; // returner elementet som blir trykket på inni listen
+    const elementJob = element.attributes.job.value; 
     
-    if(elementJob == "complete"){
-        completeToDo(element);
-    }else if(elementJob == "delete"){
+    //slett
+    if(elementJob == "delete"){
         removeToDo(element);
     }
     
-    // add item to localstorage ( this code must be added where the LIST array is updated)
+    // legg til item til localstorage 
     localStorage.setItem("TODO", JSON.stringify(LIST));
 });
 
