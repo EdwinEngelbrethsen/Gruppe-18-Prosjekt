@@ -4,6 +4,7 @@ html, body {
 }
 
 .fill {
+  background-image: url("Screenshot_12.png");
   position: relative;
   height: 310px;
   width: 210px;

@@ -1,0 +1,65 @@
+<!-- CODE EXPLAINED CHANNEL -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript - To Do List</title>
+    <!-- google awsome icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <!-- link til style.css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>To Do</h2>
+            <div class="clear">
+                <!-- clear ikon -->
+                <i class="fas fa-redo"></i>
+            </div>
+        </div>
+        <div class="content">
+            <ul id="list">
+               <!-- lages i app.js -->
+            </ul>
+        </div>
+        
+         <!-- redigeringsmeny -->
+        <div id="id01" onclick="removeToDo()" class="modal">
+            <form class="modal-content animate" action="/action_page.php">
+
+            
+                <!-- innholdet i redigerinsmenyen -->
+                <div class="des">Description<br></div>
+                <div class="text" contenteditable="true">Lage pannekaker med bacon og syltetøy</div> 
+                <div class="date">Date <br></div>
+                <input type="date" id="myDate" value="2019-01-27">
+                <div class="des" id="person">Person <br></div>
+                    <!-- drop down meny for å velge persom -->
+                    <select name="persons" class="text">
+                        <option value="anette">Anette Vestvik</option>
+                        <option value="edwin">Edwin Engelbrethsen</option>
+                        <option value="henrik">Henrik Kristiansen</option>
+                        <option value="jonas">Jonas Sandvoll</option>
+                        <option value="marie">Marie Elena Melvik</option>
+                        <option value="samuel">Samuel Grimstad</option>
+                    </select>
+                <!-- close knapp og felt i redigeringsmeny -->
+                <div class="btn-container" style="background-color:#f1f1f1">
+                    <button type="button" class="btn-close" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Close</button>
+                
+                </div>
+            </form>
+        </div> 
+        <div class="add-to-do">
+            <i class="fa fa-plus-circle"></i>
+            <input type="text" id="input" placeholder="Add a to-do">
+        </div>
+    </div>
+    <!-- link til js -->
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+   <title id="yourTitle">Your website</title>
+
+<body>
+    <link rel=stylesheet href="index.css">
+    <div id="circle"></div>
+    <div id="setTime">Set your timer</div>
+    <div id="hiddenAlarmTxt">Your alarm has arrived mafakka</div>
+  
+    
+    
+        <button type="button" name="5min" class="button" onclick="fiveMinCountdown()" style="vertical-align:middle"><span>5 min </span> </button>
+
+        <button type="button" name="10min" class="button" onclick="tenMinCountdown" style="vertical-align:middle"><span>10 min </span></button>
+        
+        <button type="button" name="15min" class="button" onclick="fifteenMinCountdown" style="vertical-align:middle"><span>15 min </span></button>
+
+        <button class="button" name="30min" onclick="thirtyMinCountdown" style="vertical-align:middle"><span>30 min </span></button>
+
+        <button class="button" name="60min" onclick="sixtyMinCountdown" style="vertical-align:middle"><span>60 min </span></button>
+        
+        <audio id="timerDoneSound" src="alarmNoise.mp3"></audio>
+    
+ 
+
+
+        <script>
+    
+             function fiveMinCountdown() {
+
+        document.getElementById("5min");
+   
+        
+             var time =parseInt ((500));
+        setTimeout(function() { document.getElementById("hiddenAlarmTxt").style.visibility="visible"; document.getElementById("timerDoneSound").play();  }, time);
+        
+        }
+            
+            function tenMinCountdown() {
+
+        document.getElementById("10min");
+   
+        
+             var time =parseInt ((600000));
+        setTimeout(function() { document.getElementById("hiddenAlarmTxt").style.visibility="visible"; document.getElementById("timerDoneSound").play();  }, time);
+        
+        
+        }
+            function fifteenMinCountdown() {
+
+        document.getElementById("15min");
+   
+        
+             var time =parseInt ((900000));
+        setTimeout(function() { document.getElementById("hiddenAlarmTxt").style.visibility="visible"; document.getElementById("timerDoneSound").play();  }, time);
+        
+        
+        }
+            function thirtyMinCountdown() {
+
+        document.getElementById("30min");
+   
+        
+             var time =parseInt ((1800000));
+        setTimeout(function() { document.getElementById("hiddenAlarmTxt").style.visibility="visible"; document.getElementById("timerDoneSound").play();  }, time);
+        
+        
+        }
+            function sixtyMinCountdown() {
+
+        document.getElementById("60min");
+   
+        
+             var time =parseInt ((3600000));
+        setTimeout(function() { document.getElementById("hiddenAlarmTxt").style.visibility="visible"; document.getElementById("timerDoneSound").play();  }, time);
+        
+        
+        }
+            
+        
+            
+    </script>
+    
+        
+        </body>
+</html>
