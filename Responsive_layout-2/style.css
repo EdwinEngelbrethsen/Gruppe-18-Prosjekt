@@ -1,0 +1,305 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rgba(210,215,240,1);
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ------------ container ------------ */
+.container{
+    padding:10px;
+    width:380px;
+    margin:0 auto;
+}
+
+.main {
+    width: 100%;
+}
+
+.todo {
+    position: relative;
+    margin: 20px;
+    display: inline-block;
+    width: 100%;
+    float: left;
+}
+
+/*.doing {
+    left: 50%;
+    position: relative;
+    
+}*/
+
+
+
+
+
+/* ------------ header ------------ */
+.header1{
+    width: 380px;
+    height:200px;
+    background-color: rgb(79, 212, 255);
+    background-size: 100% 200%;
+    background-repeat: no-repeat;
+    border-radius: 15px 15px 0 0;
+    position: relative;
+    overflow: hidden;
+    
+}
+h2{
+    position: relative;
+    top: 50%;
+    left: 30%;
+    font-weight: bold;
+    font-size: 30px;
+    
+}
+
+/* --ikon clear --*/
+.clear{
+    width : 30px;
+    height: 30px;
+    position: absolute;
+    right:20px;
+    top: 20px;
+}
+.clear i{
+    font-size: 30px;
+    color: #FFF;
+}
+.clear i:hover{
+    cursor: pointer;
+    text-shadow: 1px 3px 5px #000;
+    transform: rotate(45deg);
+}
+
+
+
+/* ------------ innhold ------------ */
+.content{
+    width:380px;
+    height: 350px;
+    max-height:350px;
+    background-color: #FFF;
+    overflow: hidden;
+}
+.content::-webkit-scrollbar {
+    display: none;
+}
+.content ul{
+    padding:0;
+    margin:0;
+}
+/* hver to-do punkt */
+.item{
+    width:380px;
+    height: 55px;
+    min-height: 45px;
+    position: relative;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-top: 1px solid rgba(0,0,0,0.1);
+    list-style: none;
+    padding: 0;
+    margin: 1px;
+}
+
+/* -- tekst i hver to-do punkt--*/
+.item p.text{
+    position: absolute;
+    padding:0;
+    margin:0;
+    font-size: 20px;
+    left:15%;
+    top:10px;
+    background-color: #FFF;
+    max-width:285px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* -- ikoner -- */
+.item i{
+    display: inline-block;
+    position: relative;
+    margin: 1.5rem;
+    left: 70%;
+    top: 25%;
+    color: rgb(79, 212, 255);
+}
+
+.item i:hover {
+  color: rgb(79, 250, 255);
+}
+
+/* farge palett */
+.item input{
+    display: inline-block;
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    border-radius: 15px;
+    margin: 0.2rem;
+}
+
+ /* ---- utropstegn -- */
+#exclemation1{
+    display: inline-block;
+    position: absolute;
+    right: 87px;
+    margin-top: 2px;
+    
+}
+
+#exclemation2{
+    display: inline-block;
+    position: absolute;
+    right: 60px;
+    margin-top: 2px;
+    
+}
+
+#exclemation3{
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+    margin-top: 2px;
+    
+}
+
+
+
+
+/* ------------ legg til to-do ------------ */
+.add-to-do{
+    position: relative;
+    width: 360px;
+    height:40px;
+    background-color: #FFF;
+    padding: 10px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+.add-to-do i{
+    position: absolute;
+    font-size: 40px;
+    color: rgb(79, 212, 255);
+}
+
+.add-to-do input{
+    position: absolute;
+    left: 50px;
+    height: 35px;
+    width: 310px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    padding-left:10px;
+   
+}
+.add-to-do input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: rgb(79, 212, 255);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+.add-to-do input::-moz-placeholder { /* Firefox 19+ */
+    color: rgb(79, 212, 255);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+.add-to-do input:-ms-input-placeholder { /* IE 10+ */
+    color: rgb(79, 212, 255);
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+}
+.add-to-do input:-moz-placeholder { /* Firefox 18- */
+    color: rgb(79, 212, 255);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+/* ----- Store kort -- */
+
+/* Store kort hoved div */
+.modal {
+  display: none; /* holdes skjult som default*/
+  position: fixed;
+  z-index: 1; /* bli på toppen */
+  left: 0;
+  top: 0;
+  width: 100%; /* full bredde */
+  height: 100%; /* full høyde */
+  overflow: auto; /* scrollbar dersom det trengs*/
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); /* svart med styrke 0.4 */
+  padding-top: 60px;
+   
+}
+
+/* styles av innholdet i store kort */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% fra toppen, 15% fra bunn og i midten */
+  width: 40%;/*Størrese på selve kortet*/
+  max-width: 250px;
+  margin-left: 40%;
+  margin-top: 10%;
+  border: 3px solid #ccc;
+  border-radius: 15px 15px 0 0;
+}
+
+/*hover på store kort */
+.modal-content:hover {
+  background: #fff;
+  border-color: #FFB300 ;
+}
+
+/*stil på description store kort */
+.des{
+    margin: 0.5rem;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+/*stil på date-feltet*/
+.date{
+    margin:0.5rem;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+#myDate{
+    margin-left: 0.5rem;
+}
+
+.text{
+    margin: 0.5rem;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+/* Animasjon for store kort gli inn */
+.animate {
+  -webkit-animation: animatezoom 1s;
+  animation: animatezoom 1s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* close knapp og container */
+.btn-container{
+    height: 2rem;
+    width: 100%;
+    display: inline-block;
+    
+}
+.btn-close{
+    display: inline-block;
+    position: relative;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+}
