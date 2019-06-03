@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="style1.css" >
+         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <!-- link til style.css -->
+    <link rel="stylesheet" href="style.css">
+    
+    </head>
+    <body class="wrapper">
+        <!-- TopNavbar -->
+        <header class="topNavbar">
+            <nav>
+
+                <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                <a href="#"><i class="fas fa-user-circle"></i> User</a>
+                <a href="#"><i class="fas fa-envelope"></i> Message</a>
+                <a href="#"><i class="fas fa-bell"></i> Notification</a>
+                <a href="#"><i class="fas fa-plus"></i> Create new</a>
+                
+             <!-- dropdown menu --> 
+                
+                <!--<div class="dropdown">
+                <button class="dropbtn">Dropdown<i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="#">Home</a>
+                        <a href="#">About me</a>
+                        </div>
+                    </div>  -->
+            </nav> 
+        </header>
+        
+        <!-- LeftSidebar -->
+        <nav class="leftSidebar">
+            <a href="#home"><i class="fas fa-home">
+                </i> Home</a>
+            <a href="#private"><i class="fas fa-clipboard">
+                </i> Private tasks</a>
+            <a class="active" href="#news" ><i class="fas fa-clipboard">     </i> Kanban board</a>
+            <a href="#groupProjects"><i class="fas fa-user-friends">
+                </i> Group projects</a>
+            <a href="#documents"><i class="fas fa-file">
+                </i> Documents</a>
+            <a href="#darkMode"><i class="fas fa-moon">
+                </i> Dark mode</a>
+        </nav>
+
+    
+        <!-- Page content -->
+        <div class="main">
+            
+        <!-- First column - todo --> 
+            <div class="todo">
+                <div class="header1">
+                    <h2>Todo</h2>
+                    <div class="clear">
+                        <!-- clear ikon -->
+                        <i class="fas fa-redo"></i>
+                        <p id="clearText">Clear</p>
+                    </div>
+                </div>
+                <div class="content">
+                    <ul id="list">
+                       <!-- lages i app.js -->
+                    </ul>
+                </div>
+        
+            <!-- redigeringsmeny -->
+                <div id="id01" onclick="removeToDo()" class="modal">
+                    <form class="modal-content animate" action="/action_page.php">
+
+            
+            <!-- innholdet i redigerinsmenyen -->
+                <div class="des">Description<br></div>
+                
+            <!-- <div class="text" contenteditable="true"></div> -->
+                <textarea rows="4" cols="20" class="des" placeholder="Noe tekst"></textarea>
+                    
+                <div class="date">Date <br></div>
+                    <input type="date" id="myDate" value="2019-01-27">
+                    <div class="des" id="person">Person <br></div>
+                    
+            <!-- drop down meny for å velge persom -->
+                <select name="persons" class="text">
+                    <option value="anette">Anette Vestvik</option>
+                    <option value="edwin">Edwin Engelbrethsen</option>
+                    <option value="henrik">Henrik Kristiansen</option>
+                    <option value="jonas">Jonas Sandvoll</option>
+                    <option value="marie">Marie Elena Melvik</option>
+                    <option value="samuel">Samuel Grimstad</option>
+                    </select>
+            <!-- close knapp og felt i redigeringsmeny -->
+                
+                <div class="btn-container" style="background-color:#f1f1f1">
+                    <button type="button" class="btn-close" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Save</button>
+                
+                </div>
+                </form>
+            </div> 
+            
+
+            <!-- button - Add to do -->    
+            <div class="add-to-do">
+                <i class="fa fa-plus-circle"></i>
+                <input type="text" id="input" placeholder="Add a to-do">
+                  
+            </div>
+        
+                
+            <!--Prøve å legge knapp -->    
+               <!-- <div class="add-to-do">
+                    <button class="addTaskToList"><p id="addTextBtn">Add task</p></button>
+                </div>
+                -->
+            
+            </div>
+            
+
+            
+        <!-- Second column - doing -->
+            <div class="doing">
+                <div class="header1">
+                    <h2>Doing</h2>
+                    <div class="clear">
+                        <!-- clear ikon -->
+                        <i class="fas fa-redo"></i>
+                        <p id="clearText">Clear</p>
+                    </div>
+                </div>
+                <div class="content">
+                    <ul id="list">
+                       <!-- lages i app.js -->
+                    </ul>
+                </div>
+        
+            <!-- redigeringsmeny -->
+                <div id="id01" onclick="removeToDo()" class="modal">
+                    <form class="modal-content animate" action="/action_page.php">
+
+            
+            <!-- innholdet i redigerinsmenyen -->
+                <div class="des">Description<br></div>
+                    
+            <!-- <div class="text" contenteditable="true"></div> -->
+                <textarea rows="4" cols="20" class="des" placeholder="Noe tekst"></textarea>
+                    
+                <div class="date">Date <br></div>
+                    <input type="date" id="myDate" value="2019-01-27">
+                    <div class="des" id="person">Person <br></div>
+                    
+            <!-- drop down meny for å velge persom -->
+                <select name="persons" class="text">
+                    <option value="anette">Anette Vestvik</option>
+                    <option value="edwin">Edwin Engelbrethsen</option>
+                    <option value="henrik">Henrik Kristiansen</option>
+                    <option value="jonas">Jonas Sandvoll</option>
+                    <option value="marie">Marie Elena Melvik</option>
+                    <option value="samuel">Samuel Grimstad</option>
+                    </select>
+            <!-- close knapp og felt i redigeringsmeny -->
+                
+                <div class="btn-container" style="background-color:#f1f1f1">
+                    <button type="button" class="btn-close" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Save</button>
+                
+                </div>
+                </form>
+            </div> 
+            
+
+           <!-- button - Add to do -->    
+            <div class="add-to-do">
+                <i class="fa fa-plus-circle"></i>
+                <input type="text" id="input" placeholder="Add a to-do">
+                  
+            </div>
+        
+                
+        <!--Prøve å legge knapp -->    
+           <!-- <div class="add-to-do">
+                <button class="addTaskToList"><p id="addTextBtn">Add task</p></button>
+            </div>
+            -->
+            
+            </div>
+        
+            
+
+
+        <!-- Third column - done --> 
+            <div class="done">
+                <div class="header1">
+                    <h2>Done</h2>
+                    <div class="clear">
+                        <!-- clear ikon -->
+                        <i class="fas fa-redo"></i>
+                        <p id="clearText">Clear</p>
+                    </div>
+                </div>
+                <div class="content">
+                    <ul id="list">
+                       <!-- lages i app.js -->
+                    </ul>
+                </div>
+        
+            <!-- redigeringsmeny -->
+                <div id="id01" onclick="removeToDo()" class="modal">
+                    <form class="modal-content animate" action="/action_page.php">
+
+            
+            <!-- innholdet i redigerinsmenyen -->
+                <div class="des">Description<br></div>
+                
+            <!-- <div class="text" contenteditable="true"></div> -->
+                <textarea rows="4" cols="20" class="des" placeholder="Noe tekst"></textarea>
+                    
+                <div class="date">Date <br></div>
+                    <input type="date" id="myDate" value="2019-01-27">
+                    <div class="des" id="person">Person <br></div>
+                    
+            <!-- drop down meny for å velge persom -->
+                <select name="persons" class="text">
+                    <option value="anette">Anette Vestvik</option>
+                    <option value="edwin">Edwin Engelbrethsen</option>
+                    <option value="henrik">Henrik Kristiansen</option>
+                    <option value="jonas">Jonas Sandvoll</option>
+                    <option value="marie">Marie Elena Melvik</option>
+                    <option value="samuel">Samuel Grimstad</option>
+                    </select>
+            <!-- close knapp og felt i redigeringsmeny -->
+                
+                <div class="btn-container" style="background-color:#f1f1f1">
+                    <button type="button" class="btn-close" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Save</button>
+                
+                    </div>
+                    </form>
+                </div> 
+            
+
+                <!-- button - Add to do -->    
+                <div class="add-to-do">
+                    <i class="fa fa-plus-circle"></i>
+                    <input type="text" id="input" placeholder="Add a to-do">
+
+                </div>
+
+
+                <!--Prøve å legge knapp -->    
+                    <!-- <div class="add-to-do">
+                    <button class="addTaskToList"><p id="addTextBtn">Add task</p></button>
+                    </div> -->
+
+                </div>  
+            
+            
+        
+        
+        </div>
+        <footer></footer>
+        <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/sortable.js"></script>
+        <!-- link til js -->
+    <script src="app.js"></script>
+    
+    </body>
+</html>
