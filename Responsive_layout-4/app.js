@@ -51,7 +51,7 @@ function addToDo(toDo, id, done, trash){
                     <input type="color" id="favcolor" name="favcolor" value="#ff0000">
                     
                     <p class="text">${toDo}</p>
-                    <i class="fa fa-edit" onclick="document.getElementById('cardEdit').style.display='block'" id="${id} "></i>
+                    <i class="fa fa-edit" onclick="document.getElementById('id01').style.display='block'" id="${id} "></i>
                    
 
                     <button type="button" id="exclemation1" onclick="addingPriority1(this)">!</button>
