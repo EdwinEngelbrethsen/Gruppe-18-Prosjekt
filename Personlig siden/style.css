@@ -1,0 +1,253 @@
+
+/* ------------ container ------------ */
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column inherit;
+    display: inline-block;
+    justify-content: center;
+    vertical-align: top;
+    
+}
+
+.todo {
+    margin: 1%;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    left: 10%;
+    top: 10%;
+    
+}
+    
+
+
+/* ------------ header ------------ */
+.header1{
+    width: 400px;
+    height: 150px;
+    background-color: rgb(79, 212, 255);
+    border-radius: 15px 15px 0 0;
+    position: relative;
+    /*overflow: hidden;  --> Er mellomrommet mellom*/
+    display: inline-block;
+    
+}
+.header1 h2{
+    top: 30px;
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    
+}
+
+/* --ikon clear --*/
+.clear{
+    width : 30px;
+    height: 30px;
+    position: absolute;
+    right:20px;
+    top: 20px;
+}
+.clear i{
+    font-size: 30px;
+    color: #FFF;
+}
+.clear i:hover{
+    cursor: pointer;
+    text-shadow: 1px 3px 5px #000;
+    transform: rotate(45deg);
+}
+
+
+/* ------------ innhold ------------ */
+.content{
+    width:400px;
+    
+    /*Auto gjør de små*/
+    height: auto;
+    max-height:350px;
+    background-color: #FFF;
+    /*denne lager scroll*/
+    overflow: scroll;
+    
+}
+.content::-webkit-scrollbar {
+    display: none;
+}
+.content ul{
+    padding:0;
+    margin:0;
+}
+/* hver to-do punkt */
+.item{
+    width: 397px;
+    height: 55px;
+    min-height: 45px;
+    position: relative;
+    align-content: center;
+    /*border: 2px solid rgba(0,0,0,0.1);*/
+    background-color: rgb(230,230,230);
+    /*border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-top: 1px solid rgba(0,0,0,0.1);*/
+    list-style: none;
+    margin: 2px;
+   /* padding: 0;
+    margin: 1px;*/
+}
+
+/* -- tekst i hver to-do punkt--*/
+.item p.text{
+    position: absolute;
+    padding:0;
+    margin:0;
+    font-size: 20px;
+    left:15%;
+    top:10px;
+    background-color: #FFF;
+    max-width:285px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* -- ikoner -- */
+.item i{
+    display: inline-block;
+    position: relative;
+    margin: 1rem;
+    left: 90%;
+    top: %;
+    color: rgb(79, 212, 255);
+}
+
+.item i:hover {
+  color: rgb(79, 250, 255);
+}
+
+/* farge palett */
+.item input{
+    display: inline-block;
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    margin: 0.2rem;
+    border-radius: 15%;
+    
+}
+
+ /* ---- utropstegn -- */
+#exclemation1{
+    display: inline-block;
+    position: absolute;
+    right: 87px;
+    margin-top: 2px;
+}
+
+#exclemation2{
+    display: inline-block;
+    position: absolute;
+    right: 60px;
+    margin-top: 2px;
+}
+
+#exclemation3{
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+    margin-top: 2px;
+}
+
+/*
+.addTaskToList {
+    width: 120px;
+    height: 40px; 
+    border-radius: 50px;
+    background-color: blue;
+    right: 100px;
+    left: auto;
+}
+#addTextBtn {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}*/
+
+
+/* ------------ legg til to-do ------------ */
+.add-to-do{
+    position: relative;
+    width: 380px;
+    height:40px;
+    background-color: #FFF;
+    border-radius: 0 0 20px 20px;
+    padding: 10px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+.add-to-do i{
+    position: relative;
+    font-size: 40px;
+    color: rgb(79, 212, 255);
+    position: inherit;
+    left: auto;
+}
+
+.add-to-do input{
+    position: absolute;
+    /*left: 50px;*/
+    height: 35px;
+    width: 230px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    padding: 1%;
+   
+}
+.add-to-do input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: rgb(79, 212, 255);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+.add-to-do input::-moz-placeholder { /* Firefox 19+ */
+    color: rgb(79, 212, 255);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+.add-to-do input:-ms-input-placeholder { /* IE 10+ */
+    color: rgb(79, 212, 255);
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+}
+.add-to-do input:-moz-placeholder { /* Firefox 18- */
+    color: rgb(79, 212, 255);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+.nots{
+    position: fixed;
+    flex-direction: column;
+    width: 250px;
+    height: 250px;
+    left: 83%;
+    top: 60%;
+    background-color: yellow;
+    
+}
+.nots h2{
+    position: relative;
+    left: 30%;
+    top: 0.5rem;
+    width: 20px;
+}
+
+.des{
+    position: relative;
+    margin: 0.5rem;
+    left: 5%;
+    width: 200px;
+    height: 100px;
+}
+
