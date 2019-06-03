@@ -1,10 +1,4 @@
-#callendar{
-    width: 50%;
-}
 
-#callendarDiv{
-    top: 0%;
-}
 
 ul {list-style-type: none;}
 body {font-family: cursive sans-serif;}
@@ -15,6 +9,8 @@ body {font-family: cursive sans-serif;}
   width: 20%;
   background: #003366 ;
   text-align: center;
+   
+   
 
 }
 
@@ -77,4 +73,7 @@ body {font-family: cursive sans-serif;}
   font-size:13px;
   color: #777;
 }
-
+#callendar{
+    width: 50%;
+   
+}
