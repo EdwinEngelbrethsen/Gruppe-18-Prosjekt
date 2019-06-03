@@ -337,3 +337,7 @@
     padding: none;
     
 }
+
+.content ul {
+    min-height: 50px;
+}

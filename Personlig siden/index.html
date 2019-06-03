@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="style.css">
     </head>
 
-    <body class="wrapper">
+    <body class="wrapper" >
         <!-- TopNavbar -->
         <header class="topNavbar">
             <nav>
@@ -27,123 +27,54 @@
             </nav> 
         </header>
         <!-- LeftSidebar -->
-        <nav class="leftSidebar">
+        <nav class="leftSidebar" onload = "startTime()">
           
-        <a class="active" href="#home">Home</a>
+        <a href="#home">Home</a>
             <a href="#news">Priority</a>
-            <a href="#contact">Todo</a>
+            <a class="active" href="#contact">Todo</a>
             <a href="#news">Projects</a>
             <a href="#news">Calendar</a>
             <a href="#news">Documents</a>
           <a href="#about">Forums</a>
+            
         </nav>
-
+        
+        
         <!-- Page content -->
         <div class="main">
             
-        <!-- First column - todo --> 
-        <div class="todo">
-        <div class="header1">
-            <h2>To Do</h2>
-            <div class="clear">
-                <!-- clear ikon -->
-                <i class="fas fa-redo"></i>
-            </div>
-        </div>
-        <div class="content">
-            <ul id="list">
-               <!-- lages i app.js -->
-            </ul>
-        </div>
-        
-         <!-- redigeringsmeny -->
-        <div id="id01" onclick="removeToDo()" class="modal">
-            <form class="modal-content animate" action="/action_page.php">
-
-            
-                <!-- innholdet i redigerinsmenyen -->
-                <div class="des">Description<br></div>
-                <div class="text" contenteditable="true">Lage pannekaker med bacon og syltetøy</div> 
-                <div class="date">Date <br></div>
-                <input type="date" id="myDate" value="2019-01-27">
-                <div class="des" id="person">Person <br></div>
-                    <!-- drop down meny for å velge persom -->
-                    <select name="persons" class="text">
-                        <option value="anette">Anette Vestvik</option>
-                        <option value="edwin">Edwin Engelbrethsen</option>
-                        <option value="henrik">Henrik Kristiansen</option>
-                        <option value="jonas">Jonas Sandvoll</option>
-                        <option value="marie">Marie Elena Melvik</option>
-                        <option value="samuel">Samuel Grimstad</option>
-                    </select>
-                <!-- close knapp og felt i redigeringsmeny -->
-                <div class="btn-container" style="background-color:#f1f1f1">
-                    <button type="button" class="btn-close" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Close</button>
-                
+             <!-- First column - todo --> 
+            <div class="todo">
+                <div class="header1">
+                    <h2>Reminder</h2>
+                    <div class="clear">
+                        <!-- clear ikon -->
+                        <i class="fas fa-redo"></i>
+                    </div>
                 </div>
-            </form>
-        </div> 
-        <div class="add-to-do">
-            <i class="fa fa-plus-circle"></i>
-            <input type="text" id="input" placeholder="Add a to-do">
-        </div>
-        
-            
-            </div>
-            
-            
-            
-            
-         <!-- Second column - doing -->
-        <div class="doing">
-        <div class="header1">
-            <h2>Doing</h2>
-            <div class="clear">
-                <!-- clear ikon -->
-                <i class="fas fa-redo"></i>
-            </div>
-        </div>
-        <div class="content">
-            <ul id="list">
-               <!-- lages i app.js -->
-            </ul>
-        </div>
-        
-         <!-- redigeringsmeny -->
-        <div id="id01" onclick="removeToDo()" class="modal">
-            <form class="modal-content animate" action="/action_page.php">
-
-            
-                <!-- innholdet i redigerinsmenyen -->
-                <div class="des">Description<br></div>
-                <div class="text" contenteditable="true">Lage pannekaker med bacon og syltetøy</div> 
-                <div class="date">Date <br></div>
-                <input type="date" id="myDate" value="2019-01-27">
-                <div class="des" id="person">Person <br></div>
-                    <!-- drop down meny for å velge persom -->
-                    <select name="persons" class="text">
-                        <option value="anette">Anette Vestvik</option>
-                        <option value="edwin">Edwin Engelbrethsen</option>
-                        <option value="henrik">Henrik Kristiansen</option>
-                        <option value="jonas">Jonas Sandvoll</option>
-                        <option value="marie">Marie Elena Melvik</option>
-                        <option value="samuel">Samuel Grimstad</option>
-                    </select>
-                <!-- close knapp og felt i redigeringsmeny -->
-                <div class="btn-container" style="background-color:#f1f1f1">
-                    <button type="button" class="btn-close" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Close</button>
-                
+                <div class="content">
+                    <ul id="list">
+                       <!-- lages i app.js -->
+                    </ul>
                 </div>
-            </form>
-        </div> 
-        <div class="add-to-do">
-            <i class="fa fa-plus-circle"></i>
-            <input type="text" id="input" placeholder="Add a to-do">
+           <!-- button - Add to do -->    
+            <div class="add-to-do">
+                <i class="fa fa-plus-circle"></i>
+                <input type="text" id="input" placeholder="Add a to-do">
+            </div>
+
         </div>
+            
+        <div class="nots">
+            <h2>Notes</h2>
+             <div class="text" contenteditable="true"></div>
+                 
+            <textarea rows="4" cols="20" class="des" placeholder="Noe tekst"></textarea>
+        </div>
+            
         </div>
         
         
-        </div>
         <footer></footer>
         <!-- link til js -->
     <script src="app.js"></script>
