@@ -1,4 +1,4 @@
-
+/* id01 = cardEdit */
 
 // henter elementer fra html
 const clear = document.querySelector(".clear");
@@ -48,16 +48,10 @@ function addToDo(toDo, id, done, trash){
     const DONE = done ? CHECK : UNCHECK;
 
     const item = `<li class="item">
-                    <input type="color" name="favcolor" value="#ff0000">
+                    <input type="color" id="favcolor" name="favcolor" value="#ff0000">
                     
                     <p class="text">${toDo}</p>
-                    <i class="fa fa-edit" onclick="document.getElementById('id01').style.display='block'" id="${id} "></i>
-                    <button type="button" id="exclemation1" onclick="addingPriority1()">!</button>
-    
-                    <button type="button" id="exclemation2" onclick="addingPriority2()">!!</button>
-    
-                    <button type="button" id="exclemation3" onclick="addingPriority3()">!!!</button>
-
+                    
                     <i class="fa fa-trash" job="delete"  id="${id}"></i>
                     
                   </li>

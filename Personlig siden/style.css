@@ -1,58 +1,42 @@
-body{
-    padding: 0;
-    margin: 0;
-    background-color: rgba(210,215,240,1);
-    font-family: 'Montserrat', sans-serif;
-}
 
 /* ------------ container ------------ */
-.container{
-    padding:10px;
-    width:380px;
-    margin:0 auto;
-}
-
 .main {
     width: 100%;
-}
-
-.todo {
-    position: relative;
-    margin: 20px;
+    display: flex;
+    flex-direction: column inherit;
     display: inline-block;
-    width: 30%;
-    float: left;
-}
-
-.doing {
-    left: 25%;
-    position: relative;
-    width: 40%;
-    bottom: 50%;
-    left: 35%;
+    justify-content: center;
+    vertical-align: top;
     
 }
 
-
-
+.todo {
+    margin: 1%;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    left: 10%;
+    top: 10%;
+    
+}
+    
 
 
 /* ------------ header ------------ */
 .header1{
-    width: 380px;
-    height:200px;
+    width: 400px;
+    height: 150px;
     background-color: rgb(79, 212, 255);
-    background-size: 100% 200%;
-    background-repeat: no-repeat;
     border-radius: 15px 15px 0 0;
     position: relative;
-    overflow: hidden;
+    /*overflow: hidden;  --> Er mellomrommet mellom*/
+    display: inline-block;
     
 }
-h2{
+.header1 h2{
+    top: 30px;
     position: relative;
-    top: 50%;
-    left: 30%;
+    text-align: center;
     font-weight: bold;
     font-size: 30px;
     
@@ -77,14 +61,17 @@ h2{
 }
 
 
-
 /* ------------ innhold ------------ */
 .content{
-    width:380px;
-    height: 350px;
+    width:400px;
+    
+    /*Auto gjør de små*/
+    height: auto;
     max-height:350px;
     background-color: #FFF;
-    overflow: hidden;
+    /*denne lager scroll*/
+    overflow: scroll;
+    
 }
 .content::-webkit-scrollbar {
     display: none;
@@ -95,15 +82,19 @@ h2{
 }
 /* hver to-do punkt */
 .item{
-    width:380px;
+    width: 397px;
     height: 55px;
     min-height: 45px;
     position: relative;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-    border-top: 1px solid rgba(0,0,0,0.1);
+    align-content: center;
+    /*border: 2px solid rgba(0,0,0,0.1);*/
+    background-color: rgb(230,230,230);
+    /*border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-top: 1px solid rgba(0,0,0,0.1);*/
     list-style: none;
-    padding: 0;
-    margin: 1px;
+    margin: 2px;
+   /* padding: 0;
+    margin: 1px;*/
 }
 
 /* -- tekst i hver to-do punkt--*/
@@ -123,9 +114,9 @@ h2{
 .item i{
     display: inline-block;
     position: relative;
-    margin: 1.5rem;
-    left: 70%;
-    top: 25%;
+    margin: 1rem;
+    left: 90%;
+    top: %;
     color: rgb(79, 212, 255);
 }
 
@@ -139,8 +130,9 @@ h2{
     position: absolute;
     width: 30px;
     height: 20px;
-    border-radius: 15px;
     margin: 0.2rem;
+    border-radius: 15%;
+    
 }
 
  /* ---- utropstegn -- */
@@ -149,7 +141,6 @@ h2{
     position: absolute;
     right: 87px;
     margin-top: 2px;
-    
 }
 
 #exclemation2{
@@ -157,7 +148,6 @@ h2{
     position: absolute;
     right: 60px;
     margin-top: 2px;
-    
 }
 
 #exclemation3{
@@ -165,36 +155,54 @@ h2{
     position: absolute;
     right: 30px;
     margin-top: 2px;
-    
 }
 
-
+/*
+.addTaskToList {
+    width: 120px;
+    height: 40px; 
+    border-radius: 50px;
+    background-color: blue;
+    right: 100px;
+    left: auto;
+}
+#addTextBtn {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}*/
 
 
 /* ------------ legg til to-do ------------ */
 .add-to-do{
-    
-    width: 360px;
+    position: relative;
+    width: 380px;
     height:40px;
     background-color: #FFF;
+    border-radius: 0 0 20px 20px;
     padding: 10px;
     border-top: 1px solid rgba(0,0,0,0.1);
 }
 .add-to-do i{
-    position: absolute;
+    position: relative;
     font-size: 40px;
     color: rgb(79, 212, 255);
+    position: inherit;
+    left: auto;
 }
 
 .add-to-do input{
     position: absolute;
-    left: 50px;
+    /*left: 50px;*/
     height: 35px;
-    width: 310px;
+    width: 230px;
     background-color: transparent;
     border: none;
     font-size: 20px;
-    padding-left:10px;
+    padding: 1%;
    
 }
 .add-to-do input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -218,91 +226,28 @@ h2{
     font-size: 20px;
 }
 
-/* ----- Store kort -- */
-
-/* Store kort hoved div */
-.modal {
-  display: none; /* holdes skjult som default*/
-  position: fixed;
-  z-index: 1; /* bli på toppen */
-  left: 0;
-  top: 0;
-  width: 100%; /* full bredde */
-  height: 100%; /* full høyde */
-  overflow: auto; /* scrollbar dersom det trengs*/
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.4); /* svart med styrke 0.4 */
-  padding-top: 60px;
-   
-}
-
-/* styles av innholdet i store kort */
-.modal-content {
-  background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% fra toppen, 15% fra bunn og i midten */
-  width: 40%;/*Størrese på selve kortet*/
-  max-width: 250px;
-  margin-left: 40%;
-  margin-top: 10%;
-  border: 3px solid #ccc;
-  border-radius: 15px 15px 0 0;
-}
-
-/*hover på store kort */
-.modal-content:hover {
-  background: #fff;
-  border-color: #FFB300 ;
-}
-
-/*stil på description store kort */
-.des{
-    margin: 0.5rem;
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
+.nots{
+    position: fixed;
+    flex-direction: column;
+    width: 250px;
+    height: 250px;
+    left: 83%;
+    top: 60%;
+    background-color: yellow;
     
 }
-/*stil på date-feltet*/
-.date{
-    margin:0.5rem;
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
-}
-#myDate{
-    margin-left: 0.5rem;
-}
-
-.text{
-    margin: 0.5rem;
-    font-family: 'Montserrat', sans-serif;
-    
-}
-
-/* Animasjon for store kort gli inn */
-.animate {
-  -webkit-animation: animatezoom 1s;
-  animation: animatezoom 1s
-}
-
-@-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)} 
-  to {-webkit-transform: scale(1)}
-}
-  
-@keyframes animatezoom {
-  from {transform: scale(0)} 
-  to {transform: scale(1)}
-}
-
-/* close knapp og container */
-.btn-container{
-    height: 2rem;
-    width: 100%;
-    display: inline-block;
-    
-}
-.btn-close{
-    display: inline-block;
+.nots h2{
     position: relative;
-    margin-top: 0.5rem;
-    margin-left: 0.5rem;
+    left: 30%;
+    top: 0.5rem;
+    width: 20px;
 }
+
+.des{
+    position: relative;
+    margin: 0.5rem;
+    left: 5%;
+    width: 200px;
+    height: 100px;
+}
+
