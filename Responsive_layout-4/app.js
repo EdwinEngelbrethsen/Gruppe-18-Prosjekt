@@ -52,11 +52,13 @@ function addToDo(toDo, id, done, trash){
                     
                     <p class="text">${toDo}</p>
                     <i class="fa fa-edit" onclick="document.getElementById('cardEdit').style.display='block'" id="${id} "></i>
-                    <button type="button" id="exclemation1" onclick="addingPriority1()">!</button>
+                   
+
+                    <button type="button" id="exclemation1" onclick="addingPriority1(this)">!</button>
     
-                    <button type="button" id="exclemation2" onclick="addingPriority2()">!!</button>
+                    <button type="button" id="exclemation2" onclick="addingPriority2(this)">!!</button>
     
-                    <button type="button" id="exclemation3" onclick="addingPriority3()">!!!</button>
+                    <button type="button" id="exclemation3" onclick="addingPriority3(this)">!!!</button>
 
                     <i class="fa fa-trash" job="delete"  id="${id}"></i>
                     
@@ -134,55 +136,42 @@ function myFunction() {
 /* ------- utropstegn ----- */
 
  
-    function addingPriority1() {
-        document.getElementById("exclemation1");
-   
-        var wantAlarm = prompt("Do you want an alarm?");
-        if(wantAlarm==="yes"){
-            var milliseconds = parseInt(prompt("Type in number of seconds until alert"));
-             var time = (milliseconds*1000);
-        setTimeout(function() { alert("Your alarm is here motherfucker!!!"); }, time);
-            console.log("!");
-        }
-        else{
-            console.log("!");
+    function addingPriority1(e) {
+        e.style = "box-shadow: 0px 0px 5px rgb(255, 0, 0);"
         }
       
-}
- 
-   function addingPriority2() {
-        document.getElementById("exclemation2");
-   
-        var wantAlarm = prompt("Do you want an alarm?");
-       
-       if(wantAlarm==="yes"){
-            var milliseconds = parseInt(prompt("Type in number of seconds until alert"));
-             var time = (milliseconds*1000);
-        setTimeout(function() { alert("Your alarm is here motherfucker!!!"); }, time);
-            console.log("!!");
-        }
-        
-       else{
-            console.log("!!");
-        }
-      
-}
- 
-        function addingPriority3() {
-        document.getElementById("exclemation3");
-   
-        var wantAlarm = prompt("Do you want an alarm?");
-        
-            if(wantAlarm==="yes"){
-            var milliseconds = parseInt(prompt("Type in number of seconds until alert"));
-             var time = (milliseconds*1000);
-        setTimeout(function() { alert("Your alarm is here motherfucker!!!"); }, time);
-            console.log("!!!");
-        }
-        
-            else{
-            console.log("!!!");
-        }
-      
-}
 
+ 
+   function addingPriority2(e) {
+        e.style = "box-shadow: 0px 0px 5px rgb(255, 0, 0);"
+        document.getElementById("exclemation2")
+            console.log("!!");
+        }
+      
+
+ 
+        function addingPriority3(e) {
+        e.style = "box-shadow: 0px 0px 5px rgb(255, 0, 0);"
+        document.getElementById("exclemation3");
+            console.log("!!!");
+        }
+      
+
+
+
+const sortable = new Sortable.default(document.querySelectorAll('.content ul'), {
+  draggable: 'li.item'
+});
+
+sortable.on('sortable:start', () => {
+    console.log('sortable:start')
+});
+sortable.on('sortable:sort', () => {
+    console.log('sortable:sort')
+});
+sortable.on('sortable:sorted', () => {
+    console.log('sortable:sorted')
+});
+sortable.on('sortable:stop', () => {
+    console.log('sortable:stop')
+});
