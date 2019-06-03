@@ -14,14 +14,14 @@
     position: relative;
     display: inline-block;
     vertical-align: top;
-    
+
 }
-    
+
 .doing {
     margin: 1%;
     position: relative;
     display: inline-block;
-    vertical-align: top;   
+    vertical-align: top;
 }
 
 .done {
@@ -29,6 +29,22 @@
     position: relative;
     display: inline-block;
     vertical-align: top;
+}
+
+/* ---Dato--- */
+#date{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #000000;
+    /* font-size: 24px; */
+}
+
+#time{
+   position: absolute;
+   bottom: 30px;
+   left: 10px;
+   color: #000000;
 }
 
 /* ------------ header ------------ */
@@ -40,7 +56,7 @@
     position: relative;
     /*overflow: hidden;  --> Er mellomrommet mellom*/
     display: inline-block;
-    
+
 }
 .header1 h2{
     top: 30px;
@@ -80,7 +96,7 @@
 /* ------------ innhold ------------ */
 .content{
     width:300px;
-    
+
     /*Auto gjør de små*/
     height: auto;
     max-height:350px;
@@ -157,7 +173,7 @@
     /*border: hidden;*/
     border-color: rgb(100,100,100);
     padding: none;
-    
+
 }
 
 
@@ -186,7 +202,7 @@
 /*
 .addTaskToList {
     width: 120px;
-    height: 40px; 
+    height: 40px;
     border-radius: 50px;
     background-color: blue;
     right: 100px;
@@ -230,7 +246,7 @@
     border: none;
     font-size: 20px;
     padding: 1%;
-   
+
 }
 .add-to-do input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: rgb(79, 212, 255);
@@ -265,10 +281,10 @@
   width: 100%; /* full bredde */
   height: 100%; /* full høyde */
   overflow: hidden; /* auto --> scrollbar dersom det trengs*/
-  background-color: rgb(0,0,0); 
+  background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.4); /* svart med styrke 0.4 */
   padding-top: 60px;
-   
+
 }
 
 /* styles av innholdet i store kort */
@@ -295,7 +311,7 @@
    /* margin: 0.5rem;*/
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
-    
+
 }
 /*stil på date-feltet*/
 .date{
@@ -310,7 +326,7 @@
 .text{
     margin: 0.5rem;
     font-family: 'Montserrat', sans-serif;
-    
+
 }
 
 /* Animasjon for store kort gli inn */
@@ -320,12 +336,12 @@
 }
 
 @-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)} 
+  from {-webkit-transform: scale(0)}
   to {-webkit-transform: scale(1)}
 }
-  
+
 @keyframes animatezoom {
-  from {transform: scale(0)} 
+  from {transform: scale(0)}
   to {transform: scale(1)}
 }
 
@@ -335,7 +351,7 @@
     width: 100%;
     display: inline-block;
     border-radius: 0 0 15% 15%;
-    
+
 }
 .btn-close{
     display: inline-block;
