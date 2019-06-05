@@ -7,6 +7,16 @@ html, body {
     
     }
 
+.logo{
+    position: absolute;
+    display: inline-block;
+    left: 25%;
+    
+   
+    
+    
+}
+
 /* Inputt felt, brukernavn og passord */
 input[type=text], input[type=password] {
   width: 100%;
@@ -34,7 +44,7 @@ button {
     position: relative;
     display: inline-block;
     left: 42%;
-    top: 35%;
+    top: 50%;
     border: 2px solid rgb(79, 212, 255);
 }
 /*hover effekt på knapper*/
