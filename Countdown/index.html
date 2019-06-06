@@ -4,24 +4,24 @@
 
 <body>
     <link rel=stylesheet href="index.css">
-    <div id="circle"></div>
-    <div id="setTime">Set your timer</div>
-    <div id="hiddenAlarmTxt">Your alarm has arrived</div>
+    <div id="cdCircle"></div>
+    <div id="cdSetTime">Set your timer</div>
+    <div id="cdHiddenAlarmTxt">Your alarm has arrived</div>
     
     
-    <button type="button" id="stopButton" name="stopAudio" class="button" onclick="stopAudioPlay()" style="vertical-align:middle"><span>Stop </span> </button>
+    <button type="button" id="stopButton" name="stopAudio" class="cdButton" onclick="stopAudioPlay()" style="vertical-align:middle"><span>Stop </span> </button>
   
     
     
-        <button type="button" name="5min" class="button" onclick="fiveMinCountdown()" style="vertical-align:middle"><span>5 min </span> </button>
+        <button type="button" name="5min" class="cdButton" onclick="fiveMinCountdown()" style="vertical-align:middle"><span>5 min </span> </button>
 
-        <button type="button" name="10min" class="button" onclick="tenMinCountdown" style="vertical-align:middle"><span>10 min </span></button>
+        <button type="button" name="10min" class="cdButton" onclick="tenMinCountdown" style="vertical-align:middle"><span>10 min </span></button>
         
-        <button type="button" name="15min" class="button" onclick="fifteenMinCountdown" style="vertical-align:middle"><span>15 min </span></button>
+        <button type="button" name="15min" class="cdButton" onclick="fifteenMinCountdown" style="vertical-align:middle"><span>15 min </span></button>
 
-        <button class="button" name="30min" onclick="thirtyMinCountdown" style="vertical-align:middle"><span>30 min </span></button>
+        <button class="cdButton" name="30min" onclick="thirtyMinCountdown" style="vertical-align:middle"><span>30 min </span></button>
 
-        <button class="button" name="60min" onclick="sixtyMinCountdown" style="vertical-align:middle"><span>60 min </span></button>
+        <button class="cdButton" name="60min" onclick="sixtyMinCountdown" style="vertical-align:middle"><span>60 min </span></button>
     
     
         
@@ -37,10 +37,10 @@
         document.getElementById("5min");
    
         
-             var time =parseInt ((5000));
-        setTimeout(function() { document.getElementById("hiddenAlarmTxt").style.visibility="visible";
+             var cdTime =parseInt ((5000));
+        setTimeout(function() { document.getElementById("cdHiddenAlarmTxt").style.visibility="visible";
         document.getElementById("stopButton").style.visibility="visible";                       
-        document.getElementById("timerDoneSound").play();  }, time);
+        document.getElementById("timerDoneSound").play();  }, cdTime);
         
         }
             
@@ -49,10 +49,10 @@
         document.getElementById("10min");
    
         
-             var time =parseInt ((600000));
+             var cdTime =parseInt ((600000));
         setTimeout(function() { document.getElementById("hiddenAlarmTxt").style.visibility="visible"; 
         document.getElementById("stopButton").style.visibility="visible";                       
-        document.getElementById("timerDoneSound").play();  }, time);
+        document.getElementById("timerDoneSound").play();  }, cdTime);
         
         
         }
@@ -61,9 +61,9 @@
         document.getElementById("15min");
    
         
-             var time =parseInt ((900000));
+             var cdTime =parseInt ((900000));
         setTimeout(function() { document.getElementById("hiddenAlarmTxt").style.visibility="visible"; document.getElementById("stopButton").style.visibility="visible";
-        document.getElementById("timerDoneSound").play();  }, time);
+        document.getElementById("timerDoneSound").play();  }, cdTime);
         
         
         }
@@ -72,10 +72,10 @@
         document.getElementById("30min");
    
         
-             var time =parseInt ((1800000));
+             var cdTime =parseInt ((1800000));
         setTimeout(function() { document.getElementById("hiddenAlarmTxt").style.visibility="visible"; 
         document.getElementById("stopButton").style.visibility="visible";                       
-        document.getElementById("timerDoneSound").play();  }, time);
+        document.getElementById("timerDoneSound").play();  }, cdTime);
         
         
         }
@@ -84,10 +84,10 @@
         document.getElementById("60min");
    
         
-             var time =parseInt ((3600000));
+             var cdTime =parseInt ((3600000));
         setTimeout(function() { document.getElementById("hiddenAlarmTxt").style.visibility="visible"; 
         document.getElementById("stopButton").style.visibility="visible";                       
-        document.getElementById("timerDoneSound").play();  }, time);
+        document.getElementById("timerDoneSound").play();  }, cdTime);
         
         
         }
@@ -95,7 +95,7 @@
         function stopAudioPlay() {
 
         document.getElementById("timerDoneSound").pause();
-            document.getElementById("hiddenAlarmTxt").style.visibility="hidden";
+            document.getElementById("cdHiddenAlarmTxt").style.visibility="hidden";
             document.getElementById("stopButton").style.visibility="hidden";
         }
         

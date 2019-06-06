@@ -2,7 +2,7 @@ body{
     background-color: #eee;
 }
 
-#circle{
+#cdCircle{
     background-color: #6fc;
     height: 300px;
     width: 300px;
@@ -13,17 +13,9 @@ body{
     top: 30px;
 }
 
-#time{
-    position: relative;
-    left: 8%;
-    bottom: 200px;
-    font-style:italic;
-    font-size: 30px;
-    opacity: 0;
-    
-}
 
-#setTime{
+
+#cdSetTime{
     position:relative;
     left: 8%;
     bottom: 200px;
@@ -33,7 +25,7 @@ body{
     
 }
 
-.button {
+.cdButton {
   display: inline-block;
   border-radius: 4px;
   background-color: #f4511e;
@@ -52,14 +44,14 @@ left: -100px;
     
 }
 
-.button span {
+.cdButton span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.2s;
 }
 
-.button span:after {
+.cdButton span:after {
   content: '\00bb';
   position: absolute;
   opacity: 0;
@@ -69,16 +61,16 @@ left: -100px;
     color: aqua;
 }
 
-.button:hover span {
+.cdButton:hover span {
   padding-right: 10px;
 }
 
-.button:hover span:after {
+.cdButton:hover span:after {
   opacity: 1;
   right: 0;
 }
 
-#hiddenAlarmTxt{
+#cdHiddenAlarmTxt{
     position: relative;
     bottom: 170px;
     left: 60px;
