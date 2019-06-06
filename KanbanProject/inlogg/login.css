@@ -2,19 +2,19 @@ html, body {
     position: absolute;
     width: 100%;
     height: 100%;
-   
+
    background-image: linear-gradient(to right top, #4fd4ff, #00eaf2, #2bfac6, #9eff88, #feff4f);
-    
+
     }
 
 .logo{
     position: absolute;
     display: inline-block;
     left: 25%;
-    
-   
-    
-    
+
+
+
+
 }
 
 /* Inputt felt, brukernavn og passord */
@@ -43,10 +43,12 @@ button {
 .log{
     position: relative;
     display: inline-block;
-    left: 42%;
-    top: 50%;
+    left: 36.5%;
+    top: 55%;
+    padding: 1rem 4rem;
     border: 2px solid rgb(79, 212, 255);
 }
+
 /*hover effekt på knapper*/
 button:hover {
   opacity: 0.8;
@@ -63,7 +65,7 @@ button:hover {
      font-size: 1rem;
      font-size: bold;
      font-family: 'Montserrat', sans-serif;
-    
+
 }
 
 /* container for innlogg*/
@@ -87,7 +89,7 @@ span.psw {
   width: 100%; /* full bredde */
   height: 100%; /* full høyde */
   overflow: auto; /* scrollbar dersom det trengs*/
-  background-color: rgb(0,0,0); 
+  background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.4); /* svart med styrke 0.4 */
   padding-top: 60px;
 }
@@ -109,12 +111,12 @@ span.psw {
 }
 
 @-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)} 
+  from {-webkit-transform: scale(0)}
   to {-webkit-transform: scale(1)}
 }
-  
+
 @keyframes animatezoom {
-  from {transform: scale(0)} 
+  from {transform: scale(0)}
   to {transform: scale(1)}
 }
 
@@ -128,7 +130,7 @@ span.psw {
   width: 100%; /* full bredde */
   height: 100%; /* full høyde */
   overflow: auto; /* scrollbar dersom det trengs*/
-  background-color: rgb(0,0,0); 
+  background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.4); /* svart med styrke 0.4 */
   padding-top: 60px;
   border-radius: 15px;

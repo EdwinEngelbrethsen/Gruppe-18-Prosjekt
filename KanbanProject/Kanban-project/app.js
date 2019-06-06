@@ -66,7 +66,7 @@ clear.addEventListener("click", function(){
 // legg til en to-do funksjon
 function addToDo(toDo, id, done, trash){
 
-    if(trash){ return; }
+    if(trash){ return ""; }
 
     const DONE = done ? CHECK : UNCHECK;
 
@@ -140,6 +140,7 @@ list.addEventListener("click", function(event){
     //slett
     if(elementJob == "delete"){
         removeToDo(element);
+        console.log(element);
     }
 
     // legg til item til localstorage

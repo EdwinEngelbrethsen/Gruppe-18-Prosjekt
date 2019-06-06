@@ -16,7 +16,7 @@
     position: relative;
     display: inline-block;
     vertical-align: top;
-    
+
 
 }
 
@@ -35,6 +35,13 @@
    bottom: 30px;
    left: 10px;
    color: #000000;
+}
+
+#logo {
+  position: absolute;
+  top: 4px;
+  left: 3px;
+
 }
 
 /* ------------ header ------------ */
@@ -93,7 +100,7 @@
     /*denne lager scroll(auto)*/
     overflow-y: scroll;
     overflow-x: hidden;
-    
+
 }
 
 
@@ -140,7 +147,7 @@
     top: 40%;
     width: 20px;
     color: rgb(79, 212, 255);
-    
+
 }
 
 .item i:hover {
@@ -225,7 +232,7 @@
     padding: 10px;
     border-top: 1px solid rgba(0,0,0,0.1);
     background-color: rgb(240, 240, 240);
-    
+
 }
 .add-to-do i{
     position: relative;
@@ -280,7 +287,7 @@
     top: 63%;
     background-color: yellow;
     border-radius: 15px;
-    
+
 }
 .nots h2{
     position: relative;
@@ -304,7 +311,7 @@
     height: 500px;
     list-style: none;
     margin: 1rem;
-    background-color: rgb(131, 74, 232);
+    background-color: rgb(79,212,255);
     border-radius: 15px;
     top: 12%;
     border: 2px solid rgb(170, 130, 252);
@@ -320,7 +327,7 @@
 }
 
 .activity li{
-    position: absolute; 
+    position: absolute;
 }
 
 
@@ -338,26 +345,26 @@ html {
     box-sizing: border-box;
       font-size: 10px;
   }
-  
+
   body {
       color: #333;
       font-size: 1.6rem;
-    background-color: #FAFAFA;
+    
   }
-  
+
   .logo {
       margin: 1.6rem auto;
       text-align: center;
   }
-  
+
   a, a:visited {
       color: #0A9297;
   }
-  
+
   h1 {
       text-align: center;
   }
-  
+
   .calender {
       width: 30%;
       margin: 1rem auto;
@@ -367,17 +374,17 @@ html {
       top: 5%;
       left: 79%;
   }
-  
+
   .demo-picked {
       font-size: 1.2rem;
       text-align: center;
   }
-  
+
   .demo-picked span {
       font-weight: bold;
   }
-  
-  
+
+
   :root {
     --vcal-bg-color: #fff;
     --vcal-border-radius: 0;
@@ -387,11 +394,11 @@ html {
     --vcal-selected-bg-color: #E7E9ED;
     --vcal-selected-color: #333;
   }
-  
+
   #v-cal *, #v-cal *:before, #v-cal *:after {
     box-sizing: border-box;
   }
-  
+
   #v-cal {
     background-color: var(--vcal-bg-color);
     border-radius: var(--vcal-border-radius);
@@ -401,7 +408,7 @@ html {
     overflow: hidden;
     width: 100%;
   }
-  
+
   #v-cal .vcal-btn {
     -moz-user-select: none;
     -ms-user-select: none;
@@ -418,29 +425,29 @@ html {
     padding: 0;
     text-align: center;
   }
-  
+
   #v-cal .vcal-header {
     align-items: center;
     display: flex;
     padding: 1.2rem 1.4rem;
   }
-  
+
   #v-cal .vcal-header svg {
     fill: var(--vcal-today-bg-color);
   }
-  
+
   #v-cal .vcal-header__label {
     font-weight: bold;
     text-align: center;
     width: 100%;
   }
-  
+
   #v-cal .vcal-week {
     background-color: var(--vcal-selected-bg-color);
     display: flex;
     flex-wrap: wrap;
   }
-  
+
   #v-cal .vcal-week span {
     flex-direction: column;
     flex: 0 0 14.28%;
@@ -451,13 +458,13 @@ html {
     text-align: center;
     text-transform: uppercase;
   }
-  
+
   #v-cal .vcal-body {
     background-color: rgba(var(--vcal-selected-bg-color), 0.3);
     display: flex;
     flex-wrap: wrap;
   }
-  
+
   #v-cal .vcal-date {
     align-items: center;
     background-color: #fff;
@@ -468,21 +475,21 @@ html {
     max-width: 14.28%;
     padding: 1.2rem 0;
   }
-  
+
   #v-cal .vcal-date--active {
     cursor: pointer;
   }
-  
+
   #v-cal .vcal-date--today {
     background-color: var(--vcal-today-bg-color);
     color: var(--vcal-today-color);
   }
-  
+
   #v-cal .vcal-date--selected {
     background-color: var(--vcal-selected-bg-color);
     color: var(--vcal-selected-color);
   }
-  
+
   #v-cal .vcal-date--disabled {
     border-radius: 0;
     cursor: not-allowed;

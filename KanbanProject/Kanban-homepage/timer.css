@@ -1,0 +1,88 @@
+.timerContainer {
+  position: absolute;
+  left: 60%;
+  bottom: 1%;
+}
+
+#cdCircle{
+    background-color: #6fc;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    left: 2%;
+    top: 30px;
+}
+
+
+
+#cdSetTime{
+    position:relative;
+    left: 8%;
+    bottom: 200px;
+    font-style:italic;
+    font-size: 30px;
+
+
+}
+
+.cdButton {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  width: 50px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+      position: relative;
+left: -100px;
+
+
+}
+
+.cdButton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.2s;
+}
+
+.cdButton span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+    color: aqua;
+}
+
+.cdButton:hover span {
+  padding-right: 10px;
+}
+
+.cdButton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#cdHiddenAlarmTxt{
+    position: relative;
+    bottom: 170px;
+    left: 60px;
+    visibility: hidden;
+}
+
+#stopButton{
+    width: 100px;
+    position: relative;
+    bottom: 170px;
+    left: 100px;
+    visibility: hidden;
+}

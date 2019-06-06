@@ -1,7 +1,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: rgba(220, 220, 220, 1);
+  background-color: rgba(210, 215, 240, .3);
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -100,7 +100,7 @@ footer {
 }
 
 /* ---Dato--- */
-#date {
+#dateElement {
   position: absolute;
   bottom: 10px;
   left: 10px;
@@ -108,7 +108,7 @@ footer {
   /* font-size: 24px; */
 }
 
-#time {
+#timeElement {
   position: absolute;
   bottom: 30px;
   left: 10px;
@@ -124,6 +124,14 @@ footer {
   justify-content: center;
   vertical-align: top;
   overflow: hidden;
+}
+
+#leaderboard {
+  position: absolute;
+  left: 85%;
+  top: 10%;
+  border: 3px solid #F1F1F1;
+  box-shadow: 2px 2px 4px #555
 }
 
 .progressBar {
@@ -156,11 +164,6 @@ table, th, td {
   text-align: center;
 }
 
-.image {
-  position: absolute;
-  width: 400px;
-  height: 250px;
-}
 
 #sectorgraph {
   border: 3px solid #010101;
@@ -174,36 +177,6 @@ table, th, td {
   bottom: 45%;
 }
 
-.imageContainer {
-  width: 50%;
-}
-
-.overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-color: #008CBA;
-  overflow: hidden;
-  width: 0;
-  height: 100;
-  transition: .5s ease;
-}
-
-.image:hover .overlay {
-  width: 100%;
-}
-
-.text {
-  white-space: nowrap;
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  overflow: hidden;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-}
 
 table {
   width: 500px;
