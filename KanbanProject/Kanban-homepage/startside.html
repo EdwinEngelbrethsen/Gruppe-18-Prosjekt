@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="timer.css">
   <title>Hovedside</title>
 </head>
 
@@ -37,63 +38,90 @@
     <a href="#darkMode"><i class="fas fa-moon">
       </i> Dark mode</a>
 
-    <div id="time"></div>
-    <div id="date"></div>
+    <div id="timeElement"></div>
+    <div id="dateElement"></div>
   </nav>
 
 
   <!-- Page content -->
   <div class="main">
-
-  <!-- Kalender kontaineren -->
+    <img src="leaderboard.png" id="leaderboard" width="175px" height="250px">
+    <!-- Kalender kontaineren -->
     <div class="calendarContainer">
-			<h1>Calendar</h1>
+      <h1>Calendar</h1>
 
-            <!--Alt på kalenderen som skal framstilles som vertikal (dato, måneder osv.)-->
-			<div id="v-cal">
-                <!--Header med måned, år og knapper for å gå til neste/forrige måned-->
-				<div class="vcal-header">
-					<button class="vcal-btn" data-calendar-toggle="previous">
-						<svg height="24" version="1.1" viewbox="0 0 24 24" width="24">
-							<path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
-						</svg>
-					</button>
+      <!--Alt på kalenderen som skal framstilles som vertikal (dato, måneder osv.)-->
+      <div id="v-cal">
+        <!--Header med måned, år og knapper for å gå til neste/forrige måned-->
+        <div class="vcal-header">
+          <button class="vcal-btn" data-calendar-toggle="previous">
+            <svg height="24" version="1.1" viewbox="0 0 24 24" width="24">
+              <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
+            </svg>
+          </button>
 
-					<div class="vcal-header__label" data-calendar-label="month"></div>
+          <div class="vcal-header__label" data-calendar-label="month"></div>
 
-					<button class="vcal-btn" data-calendar-toggle="next">
-						<svg height="24" version="1.1" viewbox="0 0 24 24" width="24">
-							<path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
-						</svg>
-					</button>
-                </div>
-
-                <!--Ukedager-->
-				<div class="vcal-week">
-					<span>Mon</span>
-					<span>Tue</span>
-					<span>Wed</span>
-					<span>Thu</span>
-					<span>Fri</span>
-					<span>Sat</span>
-					<span>Sun</span>
-                </div>
-
-                <!--Alle ukedagene til måneden-->
-				<div class="vcal-body" data-calendar-area="month"></div>
-            </div>
-            <!--Se hvilken dato brukeren klikket på + klokkeslett-->
-			<p class="demo-picked">
-				Date picked:
-				<span data-calendar-label="picked"></span>
-			</p>
+          <button class="vcal-btn" data-calendar-toggle="next">
+            <svg height="24" version="1.1" viewbox="0 0 24 24" width="24">
+              <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
+            </svg>
+          </button>
         </div>
+
+        <!--Ukedager-->
+        <div class="vcal-week">
+          <span>Mon</span>
+          <span>Tue</span>
+          <span>Wed</span>
+          <span>Thu</span>
+          <span>Fri</span>
+          <span>Sat</span>
+          <span>Sun</span>
+        </div>
+
+        <!--Alle ukedagene til måneden-->
+        <div class="vcal-body" data-calendar-area="month"></div>
+      </div>
+      <!--Se hvilken dato brukeren klikket på + klokkeslett-->
+      <p class="demo-picked">
+        Date picked:
+        <span data-calendar-label="picked"></span>
+      </p>
+    </div>
+
     <!-- Progress Bar -->
     <div class="progressBar">
       <div class="bar">50%</div>
     </div>
   </div>
-<!-- Reminder -->
+
+  <!-- Timer -->
+  <div class="timerContainer">
+    <div id="cdCircle"></div>
+    <div id="cdSetTime">Set your timer</div>
+    <div id="cdHiddenAlarmTxt">Your alarm has arrived</div>
+
+
+    <button type="button" id="stopButton" name="stopAudio" class="cdButton" onclick="stopAudioPlay()" style="vertical-align:middle"><span>Stop </span> </button>
+
+
+
+        <button type="button" name="5min" class="cdButton" onclick="fiveMinCountdown()" style="vertical-align:middle"><span>5 min </span> </button>
+
+        <button type="button" name="10min" class="cdButton" onclick="tenMinCountdown" style="vertical-align:middle"><span>10 min </span></button>
+
+        <button type="button" name="15min" class="cdButton" onclick="fifteenMinCountdown" style="vertical-align:middle"><span>15 min </span></button>
+
+        <button class="cdButton" name="30min" onclick="thirtyMinCountdown" style="vertical-align:middle"><span>30 min </span></button>
+
+        <button class="cdButton" name="60min" onclick="sixtyMinCountdown" style="vertical-align:middle"><span>60 min </span></button>
+
+
+
+        <audio id="timerDoneSound" src="alarmNoise.mp3"></audio>
+  </div>
+  <!-- Reminder -->
   <div class="reminder">
     <table>
       <tr>
@@ -117,7 +145,7 @@
         <td style="text-decoration: line-through">Arbeidskrav</td>
       </tr>
     </table>
-<!--  </div>
+    <!--  </div>
   <div class="imageContainer">
     <img class="image" id="diff" src="diffbar.png">
     <div class="overlay">
@@ -132,8 +160,76 @@
       <p class="text">Sectorgraph Work in Progress</p>
     </div>
   </div> -->
-  <footer></footer>
-  <script src="app.js"></script>
+    <footer></footer>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript">
+    function fiveMinCountdown() {
+
+      document.getElementById("5min");
+
+
+           var cdTime =parseInt ((5000));
+      setTimeout(function() { document.getElementById("cdHiddenAlarmTxt").style.visibility="visible";
+      document.getElementById("stopButton").style.visibility="visible";
+      document.getElementById("timerDoneSound").play();  }, cdTime);
+
+      }
+
+          function tenMinCountdown() {
+
+      document.getElementById("10min");
+
+
+           var cdTime =parseInt ((600000));
+      setTimeout(function() { document.getElementById("hiddenAlarmTxt").style.visibility="visible";
+      document.getElementById("stopButton").style.visibility="visible";
+      document.getElementById("timerDoneSound").play();  }, cdTime);
+
+
+      }
+          function fifteenMinCountdown() {
+
+      document.getElementById("15min");
+
+
+           var cdTime =parseInt ((900000));
+      setTimeout(function() { document.getElementById("hiddenAlarmTxt").style.visibility="visible"; document.getElementById("stopButton").style.visibility="visible";
+      document.getElementById("timerDoneSound").play();  }, cdTime);
+
+
+      }
+          function thirtyMinCountdown() {
+
+      document.getElementById("30min");
+
+
+           var cdTime =parseInt ((1800000));
+      setTimeout(function() { document.getElementById("hiddenAlarmTxt").style.visibility="visible";
+      document.getElementById("stopButton").style.visibility="visible";
+      document.getElementById("timerDoneSound").play();  }, cdTime);
+
+
+      }
+          function sixtyMinCountdown() {
+
+      document.getElementById("60min");
+
+
+           var cdTime =parseInt ((3600000));
+      setTimeout(function() { document.getElementById("hiddenAlarmTxt").style.visibility="visible";
+      document.getElementById("stopButton").style.visibility="visible";
+      document.getElementById("timerDoneSound").play();  }, cdTime);
+
+
+      }
+
+      function stopAudioPlay() {
+
+      document.getElementById("timerDoneSound").pause();
+          document.getElementById("cdHiddenAlarmTxt").style.visibility="hidden";
+          document.getElementById("stopButton").style.visibility="hidden";
+      }
+    </script>
 </body>
 
 </html>

@@ -1,7 +1,7 @@
 html, body {
-    margin: 0; 
-    padding: 0; 
-    background-color: rgba(210,215,240,1);
+    margin: 0;
+    padding: 0;
+    background-color: rgba(210, 215, 240, .3);
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -13,14 +13,14 @@ html, body {
     grid-gap: 0px;
     grid-template-columns: 15% auto;
     grid-template-rows: 55px 1fr 50px;
-    grid-template-areas: 
-        "header header" 
+    grid-template-areas:
+        "header header"
         "sidebar main"
         "footer footer";
 }
 
 header {
-    grid-area: header; 
+    grid-area: header;
 }
 
 .leftSidebar {
@@ -29,7 +29,7 @@ header {
 
 .main {
     grid-area: main;
-    
+
 }
 
 footer {
@@ -37,7 +37,7 @@ footer {
     background-color: rgb(230,230,230);
 }
 
-/*Top navbar*/ 
+/*Top navbar*/
 .topNavbar {
     background-color: rgb(131,74,232);
     overflow: hidden;
@@ -48,7 +48,7 @@ footer {
     color: #f2f2f2;
     text-align: left;
     padding: 18px 16px;
-    text-decoration: none; 
+    text-decoration: none;
     font-size: 14px;
     vertical-align: center;
 }
@@ -65,14 +65,14 @@ footer {
 
 /*Dropdown container, button*/
 .dropdown {
-    float: right; 
-    overflow: hidden; 
+    float: right;
+    overflow: hidden;
 }
 
 .dropdown .dropbtn {
     font-size: 16px;
     border: none;
-    outline: none; 
+    outline: none;
     color: #fff;
     padding: 14px 16px;
     background-color: inherit;
@@ -132,7 +132,7 @@ footer {
 .leftSidebar a.active {
     background-color: rgb(131,74,232);
     opacity: 0.8;
-    color: rgb(255,255,255);    
+    color: rgb(255,255,255);
 }
 
 /* Links on mouse-over */
@@ -148,7 +148,7 @@ div.content {
   height: 1000px;
 }
 
-/* On screens that are less than 700px wide, make the sidebar into a topbar 
+/* On screens that are less than 700px wide, make the sidebar into a topbar
 @media screen and (max-width: 700px) {
   .leftSidebar {
     width: 100%;
@@ -163,7 +163,7 @@ div.content {
     }
 }*/
 
-/* On screens that are less than 400px, display the bar vertically, instead of horizontally 
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally
 @media screen and (max-width: 400px) {
   .leftSidebar a {
     text-align: center;

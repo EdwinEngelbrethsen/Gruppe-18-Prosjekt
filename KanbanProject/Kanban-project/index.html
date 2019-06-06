@@ -16,41 +16,40 @@
 
         <!-- dropdown menu -->
             <nav>
-
+            <img id="logo" src="logo.png" height="50px" width="80px">
             <!-- Settings -->
                 <div class="dropdown">
                     <button class="dropbtn"><i class="fas fa-user-circle"></i> User<i class="fa fa-caret-down"></i></button>
                         <div class="dropdown-content">
                             <a href="#"><i class="fas fa-cog"></i> Settings</a>
                             <a href="#"><i class="fas fa-user-alt"></i> Profile</a>
+                            <a href="#darkMode"><i class="fas fa-moon"></i> Dark mode</a>
+                            <a href="../inlogg/login.html"><i class="fas fa-sign-out-alt"></i> Sign out</a>
                         </div>
                     </div>
 
                 <!-- Message -->
-                <div class="dropdown">
+                <div class="dropdown" id="dropdownMessage">
                     <button class="dropbtn"><i class="fas fa-envelope"></i> Message <i class="fa fa-caret-down"></i></button>
                         <div class="dropdown-content">
-                            <div class="divCreate"><form id="formCreateNew" action="">
-                                     <p>Project name: </p>
-                                        <input class="proInput" type="text" placeholder="Name">
-                                     <p>Project description: </p>
-                                        <input id="proDes" type="textarea" placeholder="Description">
-                                     <p>Project members: </p>
-                                         <input id="proMembers" type="text"placeholder="Project members">
-                                        <a href="#" class="btnSubmit">Create project</a>
-		                          </form></div>
+
+                              <img src="messageBox.png" class="messageBox" width="30px" height="40px"></img>
+
+
                         </div>
                     </div>
                 <!-- Notification -->
-                    <div class="dropdown">
+                    <div class="dropdown" id="dropdownNotification">
                     <button class="dropbtn"><i class="fas fa-bell"></i> Notification <i class="fa fa-caret-down"></i></button>
-                        <div class="dropdown-content">
-                            <a href="#">Home</a>
-                            <a href="#">About me</a>
-                        </div>
+                    <div class="dropdown-content">
+
+                          <img src="notifications.png" class="notificationBox"></img>
+
+
+                    </div>
                     </div>
                 <!-- Create new -->
-                    <div class="dropdown">
+                    <div class="dropdown" id="dropdownCreate">
                     <button class="dropbtn"><i class="fas fa-plus"></i> Create new <i class="fa fa-caret-down"></i></button>
                         <div class="dropdown-content">
                             <div class="divCreateNew"></div>
@@ -66,6 +65,7 @@
 		                </div>
                     </div>
             </nav>
+            <h3 id="projectName">Project | Web Prosjekt</h3>
         </header>
 
     <!-- LeftSidebar -->
@@ -80,8 +80,6 @@
                 </i> Group projects</a>
             <a href="#documents"><i class="fas fa-file">
                 </i> Documents</a>
-            <a href="#darkMode"><i class="fas fa-moon">
-                </i> Dark mode</a>
 
             <div id="time"></div>
             <div id="date"></div>
@@ -92,7 +90,7 @@
         <div class="main">
         <!-- First column - todo -->
             <div class="todo">
-                <div class="header1">
+                <div class="header1" id="firstHeader">
                     <h2>Todo</h2>
                     <div class="clear">
                         <!-- clear ikon -->
@@ -154,13 +152,8 @@
 
         <!-- Second column - doing -->
             <div class="doing">
-                <div class="header1">
+                <div class="header1" id="secondHeader">
                     <h2>Doing</h2>
-                    <div class="clear">
-                        <!-- clear ikon -->
-                        <i class="fas fa-redo"></i>
-                        <p id="clearText">Clear</p>
-                    </div>
                 </div>
                 <div class="content">
                     <ul id="list">
@@ -201,13 +194,15 @@
                 </form>
             </div>
 
-
-           <!-- button - Add to do -->
+            <!-- button - Add to do -->
             <div class="add-to-do">
-                <i class="fa fa-plus-circle"></i>
-                <input type="text" id="input" placeholder="Add a to-do">
+                <i class="fas fa-angle-double-up"></i>
+
 
             </div>
+
+
+
 
 
         <!--Prøve å legge knapp -->
@@ -223,13 +218,9 @@
 
         <!-- Third column - done -->
             <div class="done">
-                <div class="header1">
+                <div class="header1" id="thirdHeader">
                     <h2>Done</h2>
-                    <div class="clear">
-                        <!-- clear ikon -->
-                        <i class="fas fa-redo"></i>
-                        <p id="clearText">Clear</p>
-                    </div>
+
                 </div>
                 <div class="content">
                     <ul id="list">
@@ -273,8 +264,8 @@
 
                 <!-- button - Add to do -->
                 <div class="add-to-do">
-                    <i class="fa fa-plus-circle"></i>
-                    <input type="text" id="input" placeholder="Add a to-do">
+                    <i class="fas fa-angle-double-up"></i>
+
 
                 </div>
             </div>

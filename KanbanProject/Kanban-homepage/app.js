@@ -6,8 +6,8 @@ window.addEventListener('load', function () {
 
 
 // Elementer
-const dateElement = document.getElementById("date");
-const time = document.getElementById("time");
+const dateElement = document.getElementById("dateElement");
+const timeElement = document.getElementById("timeElement");
 
 // Dato funksjonene
 const options = {
@@ -24,7 +24,7 @@ function startTime() {
   var seconds = today.getSeconds();
   minutes = checkTime(minutes);
   seconds = checkTime(seconds);
-  time.innerHTML = hour + ':' + minutes + ':' + seconds;
+  timeElement.innerHTML = hour + ':' + minutes + ':' + seconds;
   var t = setTimeout(startTime, 500);
 }
 
