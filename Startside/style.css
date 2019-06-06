@@ -1,0 +1,341 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(220, 220, 220, 1);
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* side layout med grid */
+.wrapper {
+  display: grid;
+  height: 850px;
+  width: 100%;
+  grid-gap: 0px;
+  grid-template-columns: 15% auto;
+  grid-template-rows: 55px 1fr 50px;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+}
+
+/* grid area */
+header {
+  grid-area: header;
+}
+
+.leftSidebar {
+  grid-area: sidebar;
+}
+
+.main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+  background-color: rgb(230, 230, 230);
+}
+
+#logo {
+  position: absolute;
+  top: 4px;
+  left: 3px;
+
+}
+
+/* Topbar Styling */
+.topNavbar {
+  background-color: rgb(131, 74, 232);
+  overflow: hidden;
+}
+
+.topNavbar a {
+  float: right;
+  color: #f2f2f2;
+  text-align: left;
+  padding: 18px 16px;
+  text-decoration: none;
+  font-size: 14px;
+  vertical-align: center;
+}
+
+.topNavbar ul {
+  margin: 8px 0 0 0;
+  list-style: none;
+}
+
+.topNavbar a:hover {
+  background-color: #ddd;
+  color: #000;
+}
+
+/* Side navigation menu */
+.leftSidebar {
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+  overflow: hidden;
+}
+
+/* Sidebar links */
+.leftSidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+.leftSidebar a.active {
+  background-color: rgb(131, 74, 232);
+  opacity: 0.8;
+  color: rgb(255, 255, 255);
+}
+
+/* Links on mouse-over */
+.leftSidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+/* ---Dato--- */
+#date {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #000000;
+  /* font-size: 24px; */
+}
+
+#time {
+  position: absolute;
+  bottom: 30px;
+  left: 10px;
+  color: #000000;
+}
+
+/*---Main---*/
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column inherit;
+  display: inline-block;
+  justify-content: center;
+  vertical-align: top;
+  overflow: hidden;
+}
+
+.progressBar {
+  position: absolute;
+  left: 18%;
+  top: 420px;
+  border: 1px solid #000000;
+  height: 24px;
+  width: 500px;
+}
+
+.bar {
+  width: 50%;
+  height: 24px;
+  background-color: #8F3D7E;
+  font-size: 12px;
+  font-family: 'Montserrat' sans-serif;
+  text-align: center;
+}
+
+.reminder {
+  position: absolute;
+  background-color: rgb(240,240,240);
+  left: 18%;
+  bottom: 1%;
+}
+table, th, td {
+  border: 1px solid #010101;
+  font-family: 'Montserrat' sans-serif;
+  text-align: center;
+}
+
+.image {
+  position: absolute;
+  width: 400px;
+  height: 250px;
+}
+
+#sectorgraph {
+  border: 3px solid #010101;
+  left: 65%;
+  bottom: 1%
+}
+
+#diff {
+  border: 3px solid #010101;
+  left: 65%;
+  bottom: 45%;
+}
+
+.imageContainer {
+  width: 50%;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 0;
+  height: 100;
+  transition: .5s ease;
+}
+
+.image:hover .overlay {
+  width: 100%;
+}
+
+.text {
+  white-space: nowrap;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+table {
+  width: 500px;
+  height: 250px;
+}
+
+/* Kalender styling */
+.calendarContainer {
+    position: absolute;
+    left: 18%;
+    width: 48%;
+    max-width: 42rem;
+    text-align: center;
+}
+
+.demo-picked {
+    text-align: center;
+}
+
+.demo-picked span {
+    font-weight: bold;
+}
+
+
+:root {
+  --vcal-bg-color: #fff;
+  --vcal-border-radius: 0;
+  --vcal-border-color: #e7e9ed;
+  --vcal-today-bg-color: #10989E;
+  --vcal-today-color: #fff;
+  --vcal-selected-bg-color: #E7E9ED;
+  --vcal-selected-color: #333;
+}
+
+#v-cal *, #v-cal *:before, #v-cal *:after {
+  box-sizing: border-box;
+}
+
+#v-cal {
+  background-color: var(--vcal-bg-color);
+  border-radius: var(--vcal-border-radius);
+  border: solid 1px var(--vcal-border-color);
+  box-shadow: 0 4px 22px 0 rgba(0, 0, 0, 0.05);
+  margin: 0 auto;
+  overflow: hidden;
+  width: 100%
+
+}
+
+#v-cal .vcal-btn {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-appearance: button;
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  line-height: normal;
+  min-width: 27px;
+  outline: none;
+  overflow: visible;
+  padding: 0;
+  text-align: center;
+}
+
+#v-cal .vcal-header {
+  align-items: center;
+  display: flex;
+  /* padding: 1.2rem 1.4rem; */
+}
+
+#v-cal .vcal-header svg {
+  fill: var(--vcal-today-bg-color);
+}
+
+#v-cal .vcal-header__label {
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
+
+#v-cal .vcal-week {
+  background-color: var(--vcal-selected-bg-color);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#v-cal .vcal-week span {
+  flex-direction: column;
+  flex: 0 0 14.28%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  max-width: 14.28%;
+  /* padding: 1.2rem 1.4rem; */
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#v-cal .vcal-body {
+  background-color: rgba(var(--vcal-selected-bg-color), 0.3);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#v-cal .vcal-date {
+  align-items: center;
+  background-color: #fff;
+  border-radius: var(--vcal-border-radius);
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 14.28%;
+  max-width: 14.28%;
+  padding: 0.1rem 0;
+}
+
+#v-cal .vcal-date--active {
+  cursor: pointer;
+}
+
+#v-cal .vcal-date--today {
+  background-color: var(--vcal-today-bg-color);
+  color: var(--vcal-today-color);
+}
+
+#v-cal .vcal-date--selected {
+  background-color: var(--vcal-selected-bg-color);
+  color: var(--vcal-selected-color);
+}
+
+#v-cal .vcal-date--disabled {
+  border-radius: 0;
+  cursor: not-allowed;
+  opacity: 0.5;
+}

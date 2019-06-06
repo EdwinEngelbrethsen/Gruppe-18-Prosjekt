@@ -3,12 +3,15 @@
 <head>
     <link rel="stylesheet" href="login.css">
     <script src="login.js"></script>
+   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
 </head>
-<body>
+<body> 
+    
+    <img class="logo" src="logo.png">
 
 
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+<button class="log" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
 
 <div id="id01" class="modal">
   
@@ -16,11 +19,11 @@
 
 
      <div class="container">
-      <label for="uName"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uName" required>
+      <label class="label" for="uName"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uName">
 
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <label class="label" for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw">
         
       <button type="submit">Login <a href="#"></a></button>
       <label>
@@ -30,7 +33,36 @@
 
     <div class="container" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class = "newAc">New to this site? <a href="#"> Make an account</a></span>
+    </div>
+  </form>
+</div>
+    
+    <button class="log" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">New account</button>
+
+<div id="id02" class="modal2">
+  
+  <form class="modal-content animate" action="/action_page.php">
+
+
+     <div class="container">
+      <label class="label" for="uName"><b>Create a username</b></label>
+      <input type="text" placeholder="Enter Username" name="uName">
+
+      <label class="label" for="psw"><b>New Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw">
+        
+    <label class="label" for="psw"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw">
+        
+      <button type="submit">Create<a href="#"></a></button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> I agree to the terms</label>
+           
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+      
     </div>
   </form>
 </div>
