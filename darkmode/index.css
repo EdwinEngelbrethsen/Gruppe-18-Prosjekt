@@ -1,0 +1,23 @@
+#setDark {
+    display: none;
+}
+
+#setDarkToggle {
+    position: absolute;
+    top: 460px;
+    left: 699px;
+    z-index: 1000;
+    display: block;
+    padding: 8px;
+    background: black;
+    color: greenyellow;
+}
+
+  #setDark:checked ~ .main{
+      color: #000;
+            background-color: rgb(50, 50, 50);
+}
+
+#setDark:checked ~.main > h1, #setDark:checked ~.main > h3{
+    color: #FFF;
+}
