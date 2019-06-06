@@ -5,7 +5,7 @@ html, body {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* side layout med grid */
+/* ----- side layout grid start -----*/
 .wrapper {
   display: grid;
   height: 850px;
@@ -19,7 +19,7 @@ html, body {
     "footer footer";
 }
 
-/* grid area */
+/* grid området */
 header {
   grid-area: header;
 }
@@ -37,17 +37,29 @@ footer {
   background-color: rgb(230, 230, 230);
 }
 
+/* ----- page layout slutt -----*/
+/* ----- top navbar start -----*/
+
 #logo {
   position: absolute;
   top: 4px;
   left: 3px;
-
 }
 
-/* Topbar Styling */
+#projectName {
+  font-family: 'Montserrat' sans-serif;
+  position: relative;
+  font-size: 14px;
+  left: 5rem;
+  color: #fff;
+  border: 1px dashed #fff;
+  max-width: 10rem;
+  padding: 5px;
+}
+
+/* topbar Styling */
 .topNavbar {
   background-color: rgb(131, 74, 232);
-  overflow: hidden;
 }
 
 .topNavbar a {
@@ -70,7 +82,120 @@ footer {
   color: #000;
 }
 
-/* Side navigation menu */
+/* ----- nedfallsmeny topbar------ */
+.dropdown {
+  float: right;
+}
+
+.dropdown .dropbtn {
+  font-size: 14px;
+  border: none;
+  outline: none;
+  color: #fff;
+  padding: 18px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0%;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* linker i dropdown */
+.dropdown-content a {
+  float: none;
+  color: rgb(0, 0, 0);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ----- dropdown proForm start ----- */
+.divCreate {
+  position: relative;
+  height: 300px;
+  width: 200px;
+  background-color: rgb(100, 100, 100);
+}
+
+.divCreateNew {
+  position: absolute;
+}
+
+#formCreateNew {
+  height: 350px;
+  width: 250px;
+  background-color: #fff;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  margin: 0;
+  position: relative;
+  border-radius: 10px;
+}
+
+.btnSubmit {
+  position: relative;
+  background-color: #4AA45B;
+  margin: 30px 0 0 0;
+  border-radius: 5px;
+}
+
+.proInput {
+  size: 35;
+  border-radius: 2px;
+}
+/* ----- dropdown skjema posisjon ----- */
+
+#dropdownCreate {
+  position: relative !important;
+}
+
+#dropdownNotification {
+  position: relative !important;
+}
+
+#dropdownMessage {
+  position: relative !important;
+}
+
+/* -- dropdown meldingsboks -- */
+.messageBox {
+  height: 450px;
+  width: 300px;
+  padding: 0px;
+  margin: 0;
+  position: relative;
+  border-radius: 0px;
+}
+.notificationBox {
+  height: 450px;
+  width: 300px;
+  padding: 0px;
+  margin: 0;
+  position: relative;
+  border-radius: 0px;
+}
+
+/* ----- top navbar end ----- */
+/* ----- side navigation start ----- */
+
 .leftSidebar {
   margin: 0;
   padding: 0;
@@ -78,7 +203,7 @@ footer {
   overflow: hidden;
 }
 
-/* Sidebar links */
+/* Sidebar link */
 .leftSidebar a {
   display: block;
   color: black;
@@ -86,17 +211,17 @@ footer {
   text-decoration: none;
 }
 
-/* Active/current link */
+/* aktiv link */
 .leftSidebar a.active {
   background-color: rgb(131, 74, 232);
   opacity: 0.8;
   color: rgb(255, 255, 255);
 }
 
-/* Links on mouse-over */
+/* hover funksjon */
 .leftSidebar a:hover:not(.active) {
   background-color: #555;
-  color: white;
+  color: #fff;
 }
 
 /* ---Dato--- */
@@ -105,7 +230,6 @@ footer {
   bottom: 10px;
   left: 10px;
   color: #000000;
-  /* font-size: 24px; */
 }
 
 #timeElement {
@@ -115,7 +239,7 @@ footer {
   color: #000000;
 }
 
-/*---Main---*/
+/* ----- main start----- */
 .main {
   width: 100%;
   display: flex;
@@ -158,12 +282,12 @@ footer {
   left: 18%;
   bottom: 1%;
 }
+
 table, th, td {
   border: 1px solid #010101;
   font-family: 'Montserrat' sans-serif;
   text-align: center;
 }
-
 
 #sectorgraph {
   border: 3px solid #010101;
@@ -177,13 +301,12 @@ table, th, td {
   bottom: 45%;
 }
 
-
 table {
   width: 500px;
   height: 250px;
 }
 
-/* Kalender styling */
+/* kalender styling */
 .calendarContainer {
     position: absolute;
     left: 18%;
@@ -223,7 +346,6 @@ table {
   margin: 0 auto;
   overflow: hidden;
   width: 100%
-
 }
 
 #v-cal .vcal-btn {
