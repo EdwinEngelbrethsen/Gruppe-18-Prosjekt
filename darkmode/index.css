@@ -1,3 +1,9 @@
+main {
+    /*background-color: aqua;*/
+    height: 100%;
+    width: 100%;
+}
+
 #setDark {
     display: none;
 }
@@ -13,11 +19,14 @@
     color: greenyellow;
 }
 
-  #setDark:checked ~ .main{
-      color: #000;
-            background-color: rgb(50, 50, 50);
+#setDark:checked ~.main{
+    color: #000;
+    background-color: rgb(50, 50, 50);
 }
+
 
 #setDark:checked ~.main > h1, #setDark:checked ~.main > h3{
     color: #FFF;
 }
+
+
