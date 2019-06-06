@@ -1,0 +1,490 @@
+
+/* ------------ container ------------ */
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column inherit;
+    display: inline-block;
+    justify-content: center;
+    vertical-align: top;
+}
+
+.todo {
+    margin: 1%;
+    left: 30%;
+    top: 5%;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    
+
+}
+
+
+/* ---Dato--- */
+#date{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #000000;
+    /* font-size: 24px; */
+}
+
+#time{
+   position: absolute;
+   bottom: 30px;
+   left: 10px;
+   color: #000000;
+}
+
+/* ------------ header ------------ */
+.header1{
+    width: 400px;
+    height: 150px;
+    background-color: rgb(255, 92, 107);
+    border-radius: 15px 15px 0 0;
+    position: relative;
+    /*overflow: hidden;  --> Er mellomrommet mellom*/
+    display: inline-block;
+
+}
+.header1 h2{
+    top: 30px;
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+/* --ikon clear --*/
+.clear{
+    width : 20px;
+    height: 20px;
+    position: absolute;
+    right:20px;
+    top: 20px;
+}
+.clear i{
+    font-size: 25px;
+    color: #FFF;
+}
+.clear i:hover{
+    cursor: pointer;
+    text-shadow: 1px 3px 5px #000;
+    transform: rotate(45deg);
+}
+
+#clearText {
+    position: absolute;
+    color: #FFF;
+    font-size: 16px;
+    margin: 2px 0 0 0;
+    left: -8px;
+}
+
+
+/* ------------ innhold ------------ */
+.content{
+    width:400px;
+    /*Auto gjør de små*/
+    height: auto;
+    max-height: 400px;
+    background-color: #FFF;
+    /*denne lager scroll(auto)*/
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
+}
+
+
+
+.content ul{
+    padding:0;
+    margin:0;
+    background-color: rgb(240, 240, 240);
+}
+/* hver to-do punkt */
+.item{
+    width: 399px;
+    height: 55px;
+    min-height: 45px;
+    position: relative;
+    background-color: rgb(240, 240, 240);
+    /*border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-left: 1px solid rgba(0,0,0,0.1);*/
+    list-style: none;
+    padding: 0;
+    margin: 3px;
+
+}
+
+/* -- tekst i hver to-do punkt--*/
+.item p.text{
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    left: 15%;
+    top: 10px;
+    background-color: rgb(230,230,230);
+    max-width: 285px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* -- ikoner -- */
+.item i{
+    display: inline-block;
+    position: relative;
+    margin: .7rem;
+    left: 85%;
+    top: 40%;
+    width: 20px;
+    color: rgb(79, 212, 255);
+    
+}
+
+.item i:hover {
+  color: rgb(79, 250, 255);
+}
+
+/* farge palett */
+.item input{
+    display: inline-block;
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    border-radius: 15px;
+    margin: 0.2rem;
+}
+
+#favcolor {
+    /*margin: .4rem;*/
+    top: .3rem;
+    border-radius: 15px;
+    background-color: rgb(230,230,230);
+    height: 20px;
+    /* Sett border-color, dersom annen bakgrunnsfarge*/
+    /*border: hidden;*/
+    border-color: rgb(100,100,100);
+    padding: none;
+}
+#favcolor:hover {
+    background-color: rgb(250,250,250);
+}
+
+
+ /* ---- utropstegn -- */
+#exclemation1{
+    display: inline-block;
+    position: absolute;
+    right: 87px;
+    margin-top: 2px;
+}
+
+#exclemation2{
+    display: inline-block;
+    position: absolute;
+    right: 60px;
+    margin-top: 2px;
+}
+
+#exclemation3{
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+    margin-top: 2px;
+}
+
+/*
+.addTaskToList {
+    width: 120px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: blue;
+    right: 100px;
+    left: auto;
+}
+
+#addTextBtn {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}*/
+
+
+/* ------------ legg til to-do ------------ */
+.add-to-do{
+    position: relative;
+    width: 380px;
+    height:40px;
+    background-color: #FFF;
+    border-radius: 0 0 20px 20px;
+    padding: 10px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    background-color: rgb(240, 240, 240);
+    
+}
+.add-to-do i{
+    position: relative;
+    font-size: 40px;
+    color: rgb(79, 212, 255);
+    position: inherit;
+    left: auto;
+}
+
+.add-to-do input{
+    position: absolute;
+    /*left: 50px;*/
+    height: 35px;
+    width: 300px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    padding: 1%;
+
+}
+.add-to-do input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: rgb(79, 212, 255);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+.add-to-do input::-moz-placeholder { /* Firefox 19+ */
+    color: rgb(79, 212, 255);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+.add-to-do input:-ms-input-placeholder { /* IE 10+ */
+    color: rgb(79, 212, 255);
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+}
+.add-to-do input:-moz-placeholder { /* Firefox 18- */
+    color: rgb(79, 212, 255);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+.content ul {
+    min-height: 50px;
+}
+
+.nots{
+    position: fixed;
+    flex-direction: column;
+    width: 250px;
+    height: 250px;
+    left: 83%;
+    top: 63%;
+    background-color: yellow;
+    border-radius: 15px;
+    
+}
+.nots h2{
+    position: relative;
+    left: 30%;
+    top: 0.5rem;
+    width: 20px;
+}
+
+.des{
+    position: relative;
+    margin: 0.5rem;
+    left: 5%;
+    width: 200px;
+    height: 100px;
+}
+
+.activity{
+    position: absolute;
+    flex-direction: column;
+    width: 300px;
+    height: 500px;
+    list-style: none;
+    margin: 1rem;
+    background-color: rgb(131, 74, 232);
+    border-radius: 15px;
+    top: 12%;
+    border: 2px solid rgb(170, 130, 252);
+}
+
+
+.activity h3{
+    position: relative;
+    left: 30%;
+    top: 5%;
+    width: 150px;
+    border-bottom: 1px solid rgb(170, 130, 252);
+}
+
+.activity li{
+    position: absolute; 
+}
+
+
+.activity ul{
+    margin: 0.5rem;
+    margin-top: 1rem;
+    border-bottom: 1px solid rgb(170, 130, 252);
+    padding: 1rem;
+    font-size: 15px;
+}
+
+/* ----- kallender ---- */
+
+html {
+    box-sizing: border-box;
+      font-size: 10px;
+  }
+  
+  body {
+      color: #333;
+      font-size: 1.6rem;
+    background-color: #FAFAFA;
+  }
+  
+  .logo {
+      margin: 1.6rem auto;
+      text-align: center;
+  }
+  
+  a, a:visited {
+      color: #0A9297;
+  }
+  
+  h1 {
+      text-align: center;
+  }
+  
+  .calender {
+      width: 30%;
+      margin: 1rem auto;
+      max-width: 30rem;
+      text-align: center;
+      position: absolute;
+      top: 5%;
+      left: 79%;
+  }
+  
+  .demo-picked {
+      font-size: 1.2rem;
+      text-align: center;
+  }
+  
+  .demo-picked span {
+      font-weight: bold;
+  }
+  
+  
+  :root {
+    --vcal-bg-color: #fff;
+    --vcal-border-radius: 0;
+    --vcal-border-color: #e7e9ed;
+    --vcal-today-bg-color: #10989E;
+    --vcal-today-color: #fff;
+    --vcal-selected-bg-color: #E7E9ED;
+    --vcal-selected-color: #333;
+  }
+  
+  #v-cal *, #v-cal *:before, #v-cal *:after {
+    box-sizing: border-box;
+  }
+  
+  #v-cal {
+    background-color: var(--vcal-bg-color);
+    border-radius: var(--vcal-border-radius);
+    border: solid 1px var(--vcal-border-color);
+    box-shadow: 0 4px 22px 0 rgba(0, 0, 0, 0.05);
+    margin: 0 auto;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  #v-cal .vcal-btn {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-appearance: button;
+    background: none;
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+    line-height: normal;
+    min-width: 27px;
+    outline: none;
+    overflow: visible;
+    padding: 0;
+    text-align: center;
+  }
+  
+  #v-cal .vcal-header {
+    align-items: center;
+    display: flex;
+    padding: 1.2rem 1.4rem;
+  }
+  
+  #v-cal .vcal-header svg {
+    fill: var(--vcal-today-bg-color);
+  }
+  
+  #v-cal .vcal-header__label {
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+  }
+  
+  #v-cal .vcal-week {
+    background-color: var(--vcal-selected-bg-color);
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  #v-cal .vcal-week span {
+    flex-direction: column;
+    flex: 0 0 14.28%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    max-width: 14.28%;
+    padding: 1.2rem 1.4rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  #v-cal .vcal-body {
+    background-color: rgba(var(--vcal-selected-bg-color), 0.3);
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  #v-cal .vcal-date {
+    align-items: center;
+    background-color: #fff;
+    border-radius: var(--vcal-border-radius);
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 14.28%;
+    max-width: 14.28%;
+    padding: 1.2rem 0;
+  }
+  
+  #v-cal .vcal-date--active {
+    cursor: pointer;
+  }
+  
+  #v-cal .vcal-date--today {
+    background-color: var(--vcal-today-bg-color);
+    color: var(--vcal-today-color);
+  }
+  
+  #v-cal .vcal-date--selected {
+    background-color: var(--vcal-selected-bg-color);
+    color: var(--vcal-selected-color);
+  }
+  
+  #v-cal .vcal-date--disabled {
+    border-radius: 0;
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
