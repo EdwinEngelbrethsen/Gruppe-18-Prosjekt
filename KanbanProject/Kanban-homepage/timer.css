@@ -3,6 +3,7 @@
   left: 70%;
   bottom: 5%;
   margin: 0;
+  width: auto;
 }
 
 #cdCircle{
@@ -38,7 +39,7 @@
   cursor: pointer;
   margin: 5px;
   position: relative;
-  left: -130px;
+  left: -100px;
 
 
 }
