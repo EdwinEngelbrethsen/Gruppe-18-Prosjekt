@@ -257,10 +257,12 @@ footer {
 
 #leaderboard {
   position: absolute;
-  left: 85%;
+  left: 75%;
   top: 10%;
   border: 3px solid #F1F1F1;
-  box-shadow: 2px 2px 4px #555
+  box-shadow: 2px 2px 4px #555;
+  width="175px";
+  height="250px";
 }
 
 .progressBar {
@@ -285,7 +287,7 @@ footer {
   position: absolute;
   background-color: rgb(240,240,240);
   left: 18%;
-  bottom: 1%;
+  bottom: 10%;
 }
 
 table, th, td {
@@ -315,7 +317,8 @@ table {
 .calendarContainer {
     position: absolute;
     left: 18%;
-    width: 48%;
+    width: 50%;
+    padding: 5px;
     max-width: 42rem;
     text-align: center;
 }
