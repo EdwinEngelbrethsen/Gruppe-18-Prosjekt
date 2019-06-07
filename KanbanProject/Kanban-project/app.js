@@ -170,13 +170,19 @@ function myFunction() {
             console.log("!!");
         }
 
-
-
         function addingPriority3(e) {
         e.style = "box-shadow: 0px 0px 5px rgb(255, 0, 0);"
         document.getElementById("exclemation3");
             console.log("!!!");
         }
+
+/* Funksjon til å gi en alert om nytt prosjekt */ 
+function btnNewCreate() {
+    document.getElementById("btnClickNew");
+    alert("You created a new project!");
+}
+
+
 
 
 

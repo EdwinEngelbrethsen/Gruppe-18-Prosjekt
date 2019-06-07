@@ -53,13 +53,15 @@
                         <div class="dropdown-content">
                             <div class="divCreateNew"></div>
                                  <form id="formCreateNew" action=""> <!--PHP -->
-                                     <p>Project name: </p>
+                                     <p id="headlinePro">Create Project</p>
+                                     <p class="proText">Project name: </p>
                                         <input class="proInput" type="text" placeholder="Name">
-                                     <p>Project description: </p>
-                                        <input id="proDes" type="textarea" placeholder="Description">
-                                     <p>Project members: </p>
-                                         <input id="proMembers" type="text"placeholder="Project members">
-                                        <a href="#" class="btnSubmit">Create project</a>
+                                     <p class="proText">Project description: </p>
+                                        <input class="proInput" id="proDes" type="textarea" placeholder="Description">
+                                     <p class="proText">Project members: </p>
+                                         <input class="proInput" id="proMembers" type="text"placeholder="Members">
+                                     
+                                        <button href="#" class="btnSubmit" id="btnClickNew" onclick="btnNewCreate()">Create project</button>
 		                          </form>
 		                </div>
                     </div>
