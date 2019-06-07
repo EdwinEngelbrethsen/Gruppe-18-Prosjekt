@@ -6,13 +6,13 @@
 		<link href="Index.css" rel="stylesheet">
 	</head>
 	<body>
-        <!--Kalender kontaineren-->
+        <!--Calendar container / Kalender kontainer-->
 		<div class="container">
 			<h1>Calendar</h1>
 
-            <!--Alt på kalenderen som skal framstilles som vertikal (dato, måneder osv.)-->
+            <!--Everything in the calendar is verticle (date, months etc.) / Alt på kalenderen som skal framstilles som vertikal (dato, måneder osv.)-->
 			<div id="v-cal">
-                <!--Header med måned, år og knapper for å gå til neste/forrige måned-->
+                <!--Header with months, years and buttons to previous and future years / Header med måned, år og knapper for å gå til neste/forrige måned-->
 				<div class="vcal-header">
 					<button class="vcal-btn" data-calendar-toggle="previous">
 						<svg height="24" version="1.1" viewbox="0 0 24 24" width="24">
@@ -29,7 +29,7 @@
 					</button>
                 </div>
                 
-                <!--Ukedager-->
+                <!--Weekdays/Ukedager-->
 				<div class="vcal-week">
 					<span>Mon</span>
 					<span>Tue</span>
@@ -40,10 +40,10 @@
 					<span>Sun</span>
                 </div>
                 
-                <!--Alle ukedagene til måneden-->
+                <!--All days of the week to x-month / Alle ukedagene til måneden-->
 				<div class="vcal-body" data-calendar-area="month"></div>
             </div>
-            <!--Se hvilken dato brukeren klikket på + klokkeslett-->
+            <!--See which date the user clicks on + time / Se hvilken dato brukeren klikket på + klokkeslett-->
 			<p class="demo-picked">
 				Date picked:
 				<span data-calendar-label="picked"></span>
