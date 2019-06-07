@@ -1,13 +1,13 @@
 .timerContainer {
   position: absolute;
   left: 60%;
-  bottom: 1%;
+  bottom: 10%;
 }
 
 #cdCircle{
     background-color: #6fc;
-    height: 300px;
-    width: 300px;
+    height: 250px;
+    width: 250px;
     border-radius: 50%;
     display: inline-block;
     position: relative;
@@ -15,16 +15,12 @@
     top: 30px;
 }
 
-
-
 #cdSetTime{
     position:relative;
-    left: 8%;
-    bottom: 200px;
+    left: 10%;
+    bottom: 175px;
     font-style:italic;
-    font-size: 30px;
-
-
+    font-size: 24px;
 }
 
 .cdButton {
@@ -40,8 +36,8 @@
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
-      position: relative;
-left: -100px;
+  position: relative;
+  left: -130px;
 
 
 }
@@ -74,15 +70,15 @@ left: -100px;
 
 #cdHiddenAlarmTxt{
     position: relative;
-    bottom: 170px;
-    left: 60px;
+    bottom: 155px;
+    left: 45px;
     visibility: hidden;
 }
 
 #stopButton{
     width: 100px;
     position: relative;
-    bottom: 170px;
-    left: 100px;
+    bottom: 150px;
+    left: 80px;
     visibility: hidden;
 }
