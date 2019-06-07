@@ -319,6 +319,7 @@ footer {
     text-align: center;
     font-weight: bold;
     font-size: 30px;
+    color: rgb(5, 5, 5);
 }
 
 /* --ikon clear kort --*/
@@ -351,23 +352,19 @@ footer {
 /* ------------ innhold ------------ */
 .content{
     width:400px;
-    /*Auto gjør de små*/
     height: auto;
     max-height: 400px;
     background-color: #FFF;
-    /*denne lager scroll(auto)*/
     overflow-y: scroll;
     overflow-x: hidden;
-
 }
-
-
 
 .content ul{
     padding:0;
     margin:0;
     background-color: rgb(240, 240, 240);
 }
+
 /* hver to-do punkt */
 .item{
     width: 399px;
@@ -375,8 +372,6 @@ footer {
     min-height: 45px;
     position: relative;
     background-color: rgb(240, 240, 240);
-    /*border-bottom: 1px solid rgba(0,0,0,0.1);
-    border-left: 1px solid rgba(0,0,0,0.1);*/
     list-style: none;
     padding: 0;
     margin: 3px;
@@ -423,20 +418,16 @@ footer {
 }
 
 #favcolor {
-    /*margin: .4rem;*/
     top: .3rem;
     border-radius: 15px;
     background-color: rgb(230,230,230);
     height: 20px;
-    /* Sett border-color, dersom annen bakgrunnsfarge*/
-    /*border: hidden;*/
     border-color: rgb(100,100,100);
     padding: none;
 }
 #favcolor:hover {
     background-color: rgb(250,250,250);
 }
-
 
  /* ---- utropstegn -- */
 #exclemation1{
@@ -482,7 +473,6 @@ footer {
 
 .add-to-do input{
     position: absolute;
-    /*left: 50px;*/
     height: 35px;
     width: 300px;
     background-color: transparent;
@@ -517,29 +507,33 @@ footer {
 }
 
 .nots{
-    position: fixed;
+    position: absolute;
     flex-direction: column;
-    width: 250px;
-    height: 250px;
-    left: 83%;
-    top: 63%;
-    background-color: yellow;
+    width: 280px;
+    height: 300px;
+    left: 75.7%;
+    top: 58%;
+    background-color: rgb(254, 255, 79);
     border-radius: 15px;
-
+    border: 1px solid rgb(100, 100, 100);
 }
+
 .nots h2{
     position: relative;
-    left: 30%;
+    left: 11%;
     top: 0.5rem;
-    width: 20px;
+    width: 200px;
+    border-bottom: 1px solid black;
+    border-color: rgb(100, 100, 100);
+    color: rgb(5, 5, 5);
 }
 
 .des{
     position: relative;
     margin: 0.5rem;
     left: 5%;
-    width: 200px;
-    height: 100px;
+    width: 240px;
+    height: 160px;
 }
 
 .activity{
@@ -549,42 +543,42 @@ footer {
     height: 500px;
     list-style: none;
     margin: 1rem;
-    background-color: rgb(79,212,255);
+    background-color: rgba(79,212,255,.8);
     border-radius: 15px;
     top: 12%;
     border: 2px solid rgb(170, 130, 252);
 }
 
-
-.activity h3{
+.activity h1{
     position: relative;
-    left: 30%;
+    left: 8%;
     top: 5%;
-    width: 150px;
-    border-bottom: 1px solid rgb(170, 130, 252);
+    width: 240px;
+    border-bottom: 2px solid rgb(170, 130, 252);
+    font-weight: 1000;
+    font-size: 24px;
+    color: rgb(5, 5, 5);
 }
 
 .activity li{
     position: absolute;
 }
 
-
 .activity ul{
     margin: 0.5rem;
-    margin-top: 1rem;
-    border-bottom: 1px solid rgb(170, 130, 252);
+    margin-top: 2rem;
+    border-bottom: 0.5px solid rgb(170, 130, 252);
     padding: 1rem;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 /* ----- kallender ---- */
-
 html {
     box-sizing: border-box;
       font-size: 10px;
   }
 
-  body {
+body {
       color: #333;
       font-size: 1.6rem;
     
@@ -595,18 +589,14 @@ html {
       text-align: center;
   }
 
-  h1 {
-      text-align: center;
-  }
-
   .calender {
       width: 30%;
-      margin: 1rem auto;
+      margin: 0;
       max-width: 30rem;
       text-align: center;
       position: absolute;
-      top: 5%;
-      left: 79%;
+      top: 13%;
+      left: 75%;
   }
 
   .demo-picked {
