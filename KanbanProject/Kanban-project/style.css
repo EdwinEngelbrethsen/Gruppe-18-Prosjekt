@@ -5,7 +5,7 @@ html, body {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* ----- page layout start -----*/
+/* ----- side layout grid start -----*/
 .wrapper {
   display: grid;
   height: 850px;
@@ -19,6 +19,7 @@ html, body {
     "footer footer";
 }
 
+/* -- grid området -- */
 header {
   grid-area: header;
 }
@@ -36,7 +37,7 @@ footer {
   background-color: rgb(230, 230, 230);
 }
 
-/* ----- page layout end -----*/
+/* ----- page layout slutt -----*/
 /* ----- top navbar start -----*/
 #logo {
   position: absolute;
@@ -55,6 +56,7 @@ footer {
   padding: 5px;
 }
 
+/* topbar Styling */
 .topNavbar {
   background-color: rgb(131, 74, 232);
 }
@@ -79,7 +81,7 @@ footer {
   color: #000;
 }
 
-/*Dropdown container, button*/
+/* ----- nedfallsmeny topbar------ */
 .dropdown {
   float: right;
 }
@@ -95,7 +97,6 @@ footer {
   margin: 0;
 }
 
-/* dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -106,7 +107,7 @@ footer {
   z-index: 1;
 }
 
-/* links inside the dropdown */
+/* linker i dropdown */
 .dropdown-content a {
   float: none;
   color: rgb(0, 0, 0);
@@ -116,7 +117,6 @@ footer {
   text-align: left;
 }
 
-/* add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
   background-color: #ddd;
 }
@@ -160,7 +160,7 @@ footer {
   size: 35;
   border-radius: 2px;
 }
-/* ----- dropdown proForm end ----- */
+/* ----- dropdown skjema ----- */
 
 #dropdownCreate {
   position: relative !important;
@@ -174,7 +174,7 @@ footer {
   position: relative !important;
 }
 
-/* -- dropdown essage box -- */
+/* -- dropdown meldingsboks -- */
 .messageBox {
   height: 450px;
   width: 300px;
@@ -192,9 +192,9 @@ footer {
   border-radius: 0px;
 }
 
-
 /* ----- top navbar end ----- */
 /* ----- side navigation start ----- */
+
 .leftSidebar {
   margin: 0;
   padding: 0;
@@ -202,7 +202,7 @@ footer {
   overflow: hidden;
 }
 
-/* sidebar links */
+/* sidebar link */
 .leftSidebar a {
   display: block;
   color: black;
@@ -210,49 +210,37 @@ footer {
   text-decoration: none;
 }
 
-/* active/current link */
+/* aktiv link */
 .leftSidebar a.active {
   background-color: rgb(131, 74, 232);
   opacity: 0.8;
   color: rgb(255, 255, 255);
 }
 
-/* links on mouse-over */
+/* hover funksjon */
 .leftSidebar a:hover:not(.active) {
   background-color: #555;
-  color: white;
+  color: #fff;
 }
 
-/*  Page content. The value of the margin-left property should match the value of the sidebar's width property
-div.content {
-  margin-left: 200px;
-  padding: 1px 16px;
-  height: 1000px;
+/* dato */
+#date {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #000000;
 }
 
-/* On screens that are less than 700px wide, make the sidebar into a topbar
-@media screen and (max-width: 700px) {
-  .leftSidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-  .leftSidebar a {
-      float: left;
-    }
-  div.content {
-      margin-left: 0;
-    }
-}*/
-/* On screens that are less than 400px, display the bar vertically, instead of horizontally
-@media screen and (max-width: 400px) {
-  .leftSidebar a {
-    text-align: center;
-    float: none;
-  }
-}*/
+#time {
+  position: absolute;
+  bottom: 30px;
+  left: 10px;
+  color: #000000;
+}
+
 /* ----- side navigation end ----- */
-/* ----- container ----- */
+
+/* ----- main start ----- */
 .main {
   width: 100%;
   display: flex;
@@ -282,27 +270,10 @@ div.content {
   position: relative;
   display: inline-block;
   vertical-align: top;
-
 }
 
-/* ----- date start----- */
-#date {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  color: #000000;
-  /* font-size: 24px; */
-}
 
-#time {
-  position: absolute;
-  bottom: 30px;
-  left: 10px;
-  color: #000000;
-}
-
-/* ----- date end ----- */
-/* ----- header start ----- */
+/* ----- header på kort start ----- */
 .header1 {
   width: 320px;
   height: 150px;
@@ -357,15 +328,13 @@ div.content {
   left: -8px;
 }
 
-/* ----- header end ----- */
-/* ------------ content ------------ */
+/* ----- header slutt ----- */
+/* ---- innhold i kort ----- */
 .content {
   width: 320px;
-  /*Auto gjør de små*/
   height: auto;
   max-height: 400px;
   background-color: #FFF;
-  /*denne lager scroll(auto)*/
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -373,7 +342,6 @@ div.content {
 .content ul {
   padding: 0;
   margin: 0;
-
 }
 
 /* to-do punkt */
@@ -383,8 +351,6 @@ div.content {
   min-height: 45px;
   position: relative;
   background-color: rgb(240, 240, 240);
-  /*border-bottom: 1px solid rgba(0,0,0,0.1);
-    border-top: 1px solid rgba(0,0,0,0.1);*/
   list-style: none;
   padding: 0;
   margin: 1px;
@@ -461,24 +427,6 @@ div.content {
   margin-top: 2px;
 }
 
-/*
-.addTaskToList {
-    width: 120px;
-    height: 40px;
-    border-radius: 50px;
-    background-color: blue;
-    right: 100px;
-    left: auto;
-}
-
-#addTextBtn {
-    color: white;
-    text-align: center;
-    font-weight: bold;
-    font-size: 16px;
-    margin: 0;
-    padding: 0;
-}*/
 /* -- add todo -- */
 .add-to-do {
   position: relative;
@@ -537,8 +485,7 @@ div.content {
   font-size: 20px;
 }
 
-/* ----- large cards ----- */
-/* large cards with main div */
+/* ----- store kort ----- */
 .modal {
   display: none;
   /* holdes skjult som default*/

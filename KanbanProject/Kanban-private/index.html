@@ -1,37 +1,70 @@
 <!DOCTYPE html>
-<html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" type="text/css" href="style1.css" >
-         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-
-    <!-- google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <!-- link til style.css -->
-    <link rel="stylesheet" href="style.css">
+        <!-- icons -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <!-- google fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        <!-- link til style.css -->
+        <link rel="stylesheet" href="style.css">
 
     </head>
     <body class="wrapper" onload="startTime()">
         <!-- TopNavbar -->
         <header class="topNavbar">
+
+        <!-- dropdown menu -->
             <nav>
-                <img id="logo" src="logo.png" height="50px" width="80px">
-                <a href="#"><i class="fas fa-cog"></i> Settings</a>
-                <a href="#"><i class="fas fa-user-circle"></i> User</a>
-                <a href="#"><i class="fas fa-envelope"></i> Message</a>
-                <a href="#"><i class="fas fa-bell"></i> Notification</a>
-                <a href="#"><i class="fas fa-plus"></i> Create new</a>
-
-             <!-- dropdown menu -->
-
-                <!--<div class="dropdown">
-                <button class="dropbtn">Dropdown<i class="fa fa-caret-down"></i></button>
-                    <div class="dropdown-content">
-                        <a href="#">Home</a>
-                        <a href="#">About me</a>
+            <img id="logo" src="logo.png" height="50px" width="80px">
+            <!-- Settings -->
+                <div class="dropdown">
+                    <button class="dropbtn"><i class="fas fa-user-circle"></i> User<i class="fa fa-caret-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                            <a href="#"><i class="fas fa-user-alt"></i> Profile</a>
+                            <a href="#darkMode"><i class="fas fa-moon"></i> Dark mode</a>
+                            <a href="../inlogg/login.html"><i class="fas fa-sign-out-alt"></i> Sign out</a>
                         </div>
-                    </div>  -->
+                    </div>
+
+                <!-- Message -->
+                <div class="dropdown" id="dropdownMessage">
+                    <button class="dropbtn"><i class="fas fa-envelope"></i> Message <i class="fa fa-caret-down"></i></button>
+                        <div class="dropdown-content">
+
+                              <img src="messageBox.png" class="messageBox" width="30px" height="40px">
+
+
+                        </div>
+                    </div>
+                <!-- Notification -->
+                    <div class="dropdown" id="dropdownNotification">
+                    <button class="dropbtn"><i class="fas fa-bell"></i> Notification <i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+
+                          <img src="notifications.png" class="notificationBox">
+
+
+                    </div>
+                    </div>
+                <!-- Create new -->
+                    <div class="dropdown" id="dropdownCreate">
+                    <button class="dropbtn"><i class="fas fa-plus"></i> Create new <i class="fa fa-caret-down"></i></button>
+                        <div class="dropdown-content">
+                            <div class="divCreateNew"></div>
+                                 <form id="formCreateNew" action=""> <!--PHP -->
+                                     <p>Project name: </p>
+                                        <input class="proInput" type="text" placeholder="Name">
+                                     <p>Project description: </p>
+                                        <input id="proDes" type="textarea" placeholder="Description">
+                                     <p>Project members: </p>
+                                         <input id="proMembers" type="text"placeholder="Project members">
+                                        <a href="#" class="btnSubmit">Create project</a>
+		                          </form>
+		                </div>
+                    </div>
             </nav>
+            <h3 id="projectName">Project | Web Prosjekt</h3>
         </header>
 
         <!-- LeftSidebar -->
@@ -45,8 +78,6 @@
                 </i> Group projects</a>
             <a href="#documents"><i class="fas fa-file">
                 </i> Documents</a>
-            <a href="#darkMode"><i class="fas fa-moon">
-                </i> Dark mode</a>
 
             <div id="time"></div>
             <div id="date"></div>
@@ -78,9 +109,7 @@
                 <input type="text" id="input" placeholder="Add a to-do">
 
             </div>
-
             </div>
-
             <div class="nots">
             <h2>Notes</h2>
              <div class="text" contenteditable="true"></div>
@@ -89,7 +118,7 @@
             </div>
 
             <div class="activity">
-                <h3>Aktivitet</h3>
+                <p id="activity">Aktivitet</p>
                 <div class="act">
                     <li>
                         <ul>Anette gjorde en endring i WebProsjekt</ul>
@@ -150,7 +179,7 @@
         <footer></footer>
         <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/sortable.js"></script>
         <!-- link til js -->
-    <script src="app.js"></script>
+        <script src="app.js"></script>
 
     </body>
 </html>

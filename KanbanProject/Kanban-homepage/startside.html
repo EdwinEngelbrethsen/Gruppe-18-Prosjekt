@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,16 +13,65 @@
 
 <body class="wrapper" onload="startTime()">
   <header class="topNavbar">
-    <nav>
-      <img id="logo" src="logo.png" height="50px" width="80px">
-      <a href="#"><i class="fas fa-cog"></i> Settings</a>
-      <a href="#"><i class="fas fa-user-circle"></i> User</a>
-      <a href="#"><i class="fas fa-envelope"></i> Message</a>
-      <a href="#"><i class="fas fa-bell"></i> Notification</a>
-      <a href="#"><i class="fas fa-plus"></i> Create new</a>
-    </nav>
+      <!-- dropdown menu -->
+        <nav>
+            <img id="logo" src="logo.png" height="50px" width="80px">
+            <!-- Settings -->
+                <div class="dropdown">
+                    <button class="dropbtn"><i class="fas fa-user-circle"></i> User<i class="fa fa-caret-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                            <a href="#"><i class="fas fa-user-alt"></i> Profile</a>
+                            <a href="#darkMode"><i class="fas fa-moon"></i> Dark mode</a>
+                            <a href="../inlogg/login.html"><i class="fas fa-sign-out-alt"></i> Sign out</a>
+                        </div>
+                    </div>
 
+                <!-- Message -->
+                <div class="dropdown" id="dropdownMessage">
+                    <button class="dropbtn"><i class="fas fa-envelope"></i> Message <i class="fa fa-caret-down"></i></button>
+                        <div class="dropdown-content">
+
+                              <img src="../Kanban-project/messageBox.png" class="messageBox" width="30px" height="40px">
+
+
+                        </div>
+                    </div>
+                <!-- Notification -->
+                    <div class="dropdown" id="dropdownNotification">
+                    <button class="dropbtn"><i class="fas fa-bell"></i> Notification <i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+
+                          <img src="../Kanban-project/notifications.png" class="notificationBox">
+
+
+                    </div>
+                    </div>
+                <!-- Create new -->
+                    <div class="dropdown" id="dropdownCreate">
+                    <button class="dropbtn"><i class="fas fa-plus"></i> Create new <i class="fa fa-caret-down"></i></button>
+                        <div class="dropdown-content">
+                            <div class="divCreateNew"></div>
+                                 <form id="formCreateNew" action=""> <!--PHP -->
+                                     <p>Project name: </p>
+                                        <input class="proInput" type="text" placeholder="Name">
+                                     <p>Project description: </p>
+                                        <input id="proDes" type="textarea" placeholder="Description">
+                                     <p>Project members: </p>
+                                         <input id="proMembers" type="text"placeholder="Project members">
+                                        <a href="#" class="btnSubmit">Create project</a>
+		                          </form>
+		                </div>
+                    </div>
+        </nav>
+     <h3 id="projectName">Project | Web Prosjekt</h3>
   </header>
+    
+    
+    
+    
+    
+    
   <!-- LeftSidebar -->
   <nav class="leftSidebar">
     <a class="active" href="#home"><i class="fas fa-home">
