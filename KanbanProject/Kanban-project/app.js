@@ -183,9 +183,6 @@ function btnNewCreate() {
 }
 
 
-
-
-
 /* Drag and drop function */
     const sortable = new Sortable.default(document.querySelectorAll('.content ul'), {
         draggable: 'li.item'
