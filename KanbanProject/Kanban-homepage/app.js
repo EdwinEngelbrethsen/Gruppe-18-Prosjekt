@@ -166,3 +166,9 @@ var Calendar = {
       }
     }
 }
+
+/* Funksjon til å gi en alert om nytt prosjekt */ 
+function btnNewCreate() {
+    document.getElementById("btnClickNew");
+    alert("You created a new project!");
+}
